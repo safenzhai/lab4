@@ -15,10 +15,4 @@ extern uint32_t global_data;
 int enter_user_mode(void);
 int valid_addr(const void* start, size_t count, uintptr_t base, uintptr_t bound);
 
-void s_handler(void);
-#if 0
-void setup_irq_stack(char *);
-#endif
-
-
 #endif /* KERNEL_H */

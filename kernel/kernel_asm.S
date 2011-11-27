@@ -5,16 +5,13 @@
 
 #include <kernel_asm.h>
 #include <config.h>
+#include <arm/psr.h>
 
 	.file	"kernel_asm.S"
 	.text
 	.align 2
 	.global s_handler
-	.global i_handler
 	.global enter_user_mode
-	.global get_kernel_r0
-	.global setup_irq_stack
-	.global disable_intr
 
 @ custom s_handler implementation
 s_handler:
@@ -23,11 +20,9 @@ s_handler:
 @	ldr r8, [sp, #R8_OFFSET]      @ restore kernel's copy of r8
     ldr r0, =global_data
     ldr r8, [r0]
-#if 0
-	mrs r0, cpsr                  @ enable interrupts here... 
-	bic r0, r0, #IRQ_MASK
-	msr cpsr, r0
-#endif
+@	mrs r0, cpsr                  @ enable interrupts here... 
+@	bic r0, r0, #PSR_IRQ
+@	msr cpsr, r0
 @    bl enable_interrupts
 	mrs r2, spsr                  
 	str r2, [sp, #SPSR_STACK_OFFSET]  @ save spsr on the space created on stack
@@ -40,14 +35,6 @@ s_handler:
 	ldmfd sp!, {r0-r12, lr}       @unwind stack and return to caller 
 	add sp, sp, #WORD_OFFSET
 	movs pc, lr
-#if 0	
-@ custom i_handler implementation TODO: shoud this be re-entrant ?
-i_handler:
-	stmfd sp!, {r0-r12, lr}       
-	bl C_IRQ_Handler              @hand off control to C_IRQ_Handler
-	ldmfd sp!, {r0-r12, lr}       @unwind stack and return to caller 
-	subs pc, lr, #WORD_OFFSET	
-#endif
 
 @utility function that launches a user task
 enter_user_mode:
@@ -58,6 +45,7 @@ enter_user_mode:
 @	bl save_lr_and_sp_for_exit    @ save the sp and lr for use in exit handler
 @	ldmfd sp!, {r0}               
 	mov r3, #CPSR_USER_MODE
+	orr r3, r3, #0x80
 	mrs ip, cpsr                  @ change mode bits in CPSR to <flags>i_USER
 	bic ip, ip, #CPSR_LAUNCH_APP_MASK
 	orr ip, ip, r3
@@ -65,6 +53,7 @@ enter_user_mode:
 @	mov sp, r0
 	mov sp, #USR_STACK
 	ldr pc, =USR_START_ADDR       @ move control to _start of user task
+
 #if 0
 @utility method for getting the value of r0 register
 get_kernel_r0:

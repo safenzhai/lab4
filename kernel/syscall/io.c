@@ -13,6 +13,8 @@
 #include <syscall.h>
 #include <exports.h>
 #include <kernel.h>
+#include <arm/psr.h>
+#include <arm/exception.h>
 
 #define EOT_CHAR 0x04
 #define DEL_CHAR 0x7f
@@ -108,6 +110,8 @@ ssize_t write_syscall(int fd, const void *buf, size_t count)
 {
 	ssize_t write_cnt = 0;
 	const char *ubuf = buf;
+//	enable_interrupts();
+//	printf("INSIDE WRITE SYSCALL enabled interrupts\n");
 	/*
 	 * validate the fd argument
 	 */
@@ -135,6 +139,8 @@ ssize_t write_syscall(int fd, const void *buf, size_t count)
 	 while((write_cnt < (ssize_t)count) && (ubuf[write_cnt] != '\0')) {
 	 	putc(ubuf[write_cnt++]);
 	}
+//	printf("INSIDE WRITE SYSCALL disabled interrupts\n");
+//	disable_interrupts();
 	return write_cnt;	
 }
 

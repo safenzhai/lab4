@@ -10,7 +10,6 @@
 
 	.file "read.S"
 FUNC(read)
-read:
 	swi READ_SWI
 	cmp r0, #0
 	movge pc, lr

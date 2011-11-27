@@ -18,24 +18,13 @@
 #define LDR_INST_OFFSET 0x00000FFF
 #define LDR_VALID_FORMAT 0xe59ff000
 #define CUSTOM_HANDLER_INST1 0xe51ff004
-#if 0
-/*
- * signatures for syscall implementations
- */
-ssize_t kread(int fd, void *buf, size_t count);
-ssize_t kwrite(int fd, const void *buf, size_t count);
-void kexit(int status);
-unsigned long ktime(void);
-void ksleep(unsigned long);
-#endif
+
 /*
  * prototypes
  */
 int install_handler(unsigned int *vector_addr, void *handler_addr);
 void s_handler(void);
-//void i_handler(void);
-//void init_irq_regs(void);
-#if 0
-void disable_intr(void);
-#endif
+void init_irq_regs(void);
+void irq_wrapper(void);
+
 #endif /* HANDLERS_H */

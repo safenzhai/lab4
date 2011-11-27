@@ -17,6 +17,7 @@
  * Code to take an IRQ.
  */
 FUNC(irq_wrapper)
+irq_wrapper:
 	/* lr starts off pointing at next instruction + 4 -- fix this. */
 	sub      lr, lr, #4
 

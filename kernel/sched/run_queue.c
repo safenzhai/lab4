@@ -13,7 +13,8 @@
 #include <sched.h>
 #include "sched_i.h"
 
-
+#define GROUP_SHIFT 3
+#define TASK_POSITION_MASK 0x7
 
 static tcb_t* run_list[OS_MAX_TASKS];
 
@@ -58,7 +59,14 @@ static uint8_t prio_unmap_table[] =
  */
 void runqueue_init(void)
 {
-	
+	int i;
+	group_run_bits = 0;
+	for(i = 0; i < OS_MAX_TASKS; i++) {
+		run_list[i] = NULL;
+	}
+	for(i = 0; i < OS_MAX_TASKS/8; i++) {
+		run_bits[i] = 0;
+	}
 }
 
 /**
@@ -71,7 +79,17 @@ void runqueue_init(void)
  */
 void runqueue_add(tcb_t* tcb, uint8_t prio)
 {
-	
+	uint8_t ostcbx, ostcby;
+	// add to run list
+	run_list[prio] = tcb;
+
+	// add to group_run_bits
+	ostcby = prio >> GROUP_SHIFT;
+	group_run_bits |= (0x1 << ostcby);
+
+	// add to the run_bits
+	ostcbx = prio & TASK_POSITION_MASK;
+	run_bits[ostcby] |= (0x1 << ostcbx); 	
 }
 
 
@@ -84,7 +102,25 @@ void runqueue_add(tcb_t* tcb, uint8_t prio)
  */
 tcb_t* runqueue_remove(uint8_t prio)
 {
-	
+	uint8_t ostcbx, ostcby;
+	tcb_t *return_tcb = NULL;
+
+	// remove from run list
+	return_tcb = run_list[prio];
+	run_list[prio] = NULL;
+
+
+	ostcby = prio >> GROUP_SHIFT;
+
+	// remove_from the run_bits
+	ostcbx = prio & TASK_POSITION_MASK;
+	run_bits[ostcby] &= ~(0x1 << ostcbx); 	
+		
+	// remove from group_run_bits if applicable
+	if(run_bits[ostcby] == 0) {
+		group_run_bits &= ~(0x1 << ostcby);
+	}
+	return return_tcb;
 }
 
 /**
@@ -93,5 +129,29 @@ tcb_t* runqueue_remove(uint8_t prio)
  */
 uint8_t highest_prio(void)
 {
-	
+	uint8_t x, y, prio;
+
+	y = prio_unmap_table[group_run_bits];
+	x = prio_unmap_table[run_bits[y]];
+
+	prio = (y << GROUP_SHIFT) + x;
+
+	if((prio == 0) && (group_run_bits == 0)) {
+		return IDLE_PRIO;
+	}
+	return prio;
+}
+
+void print_run_queue()
+{
+	int i;
+	printf("RUN LIST\n");
+	for(i = 0; i < OS_MAX_TASKS; i++) {
+		printf("run_list[%d] = %p\n", i, run_list[i]);
+	}
+	printf("RUN BITS\n");
+	for(i = 0; i < OS_MAX_TASKS/8; i++) {
+		printf("run_bits[%d] = %x\n", i, run_bits[i]);
+	}
+	printf("GROUP_RUN_BITS = %x\n", group_run_bits);
 }

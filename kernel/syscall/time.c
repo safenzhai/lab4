@@ -11,7 +11,7 @@
 #include <bits/errno.h>
 #include <arm/timer.h>
 #include <syscall.h>
-
+#include <exports.h>
 
 /*
  * implementation of the time syscall
@@ -20,10 +20,7 @@
  */
 unsigned long time_syscall(void)
 {
-	#if 0
- 	return (get_ticks() * OS_TIMER_RESOLUTION);
-	#endif
-	return 0;
+ 	return (get_millis());
 }
 
 /*
@@ -33,7 +30,6 @@ unsigned long time_syscall(void)
  */
 void sleep_syscall(unsigned long millis)
 {
-	#if 0
 	unsigned long sleep_till_ticks;
 	/*
 	 * validate the millis arg
@@ -47,13 +43,17 @@ void sleep_syscall(unsigned long millis)
 	 * elapsed before we wake up
 	 */
 	sleep_till_ticks = get_ticks() + (millis/OS_TIMER_RESOLUTION);
+	if(sleep_till_ticks < get_ticks()) {
+		// there is an overflow..... bail out. 
+		printf("There is an overflow while calculating remaining "
+		"milliseconds to sleep. Bailing out. \n");
+		return;
+	}
+
 	while(get_ticks() < sleep_till_ticks);
 
 	/*
 	 * time to wake up!
 	 */
-	#endif
-	millis = millis;
 	return;
-	
 }

@@ -2,8 +2,8 @@ KERNEL = $(KDIR)/kernel
 KSTART = $(KDIR)/start.o
 
 # All core kernel objects go here.  Add objects here if you need to.
-KOBJS := assert.o main.o math.o memcheck.o raise.o ctype.o hexdump.o device.o \
-		 handlers.o kernel_asm.o
+KOBJS := assert.o main.o math.o memcheck.o raise.o ctype.o hexdump.o \
+         device.o handlers.o kernel_asm.o
 
 KOBJS := $(KOBJS:%=$(KDIR)/%)
 
@@ -11,6 +11,7 @@ KOBJS := $(KOBJS:%=$(KDIR)/%)
 -include $(KDIR)/syscall/kernel.mk
 -include $(KDIR)/sched/kernel.mk
 -include $(KDIR)/lock/kernel.mk
+-include $(KDIR)/drivers/kernel.mk
 
 ALL_OBJS += $(KOBJS) $(KSTART)
 ALL_CLOBBERS += $(KERNEL) $(KERNEL).bin

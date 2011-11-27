@@ -91,6 +91,6 @@ typedef uint32_t            uintptr_t;
 #define INT_MIN      INT32_MIN
 #define LONG_MIN     INT32_MIN
 #define LLONG_MIN    INT64_MIN
-
+#define NULL 0
 
 #endif /* _BITS_TYPES_H_ */

@@ -36,7 +36,6 @@
 
 #define OSTMR_FREQ            3686400      /* Oscillator frequency in hz */
 
-#ifndef ASSEMBLER
 
 void init_timer(void);
 void destroy_timer(void);
@@ -44,6 +43,7 @@ void timer_handler(unsigned int int_num);
 unsigned long get_ticks(void);
 unsigned long get_millis(void);
 
+#ifndef ASSEMBLER
 #endif /* ASSEMBLER */
 
 #endif /* _TIMER_H_ */

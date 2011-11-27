@@ -12,17 +12,8 @@
 #include <arm/timer.h>
 #include <arm/reg.h>
 #include <syscall.h>
-
-/*
- * globals
- */
-#if 0
-unsigned int def_swi_handler_inst1, def_swi_handler_inst2;
-unsigned int def_irq_handler_inst1, def_irq_handler_inst2;
-#endif
-unsigned int *def_swi_handler_loc;
-//unsigned int *def_irq_handler_loc;
-
+#include <arm/psr.h>
+#include <arm/exception.h>
 
  /*
  * function that installs the custom handler by hijacking the first 2 
@@ -39,14 +30,14 @@ int install_handler(unsigned int *vector_addr, void *handler_addr)
 	/*
 	 * validate the vector address
 	 */
-	if((vector_addr != (unsigned int *)SWI_VECTOR_ADDR)) {
-//	&&
-//	   (vector_addr != (unsigned int *)IRQ_VECTOR_ADDR)) {
+	if((vector_addr != (unsigned int *)SWI_VECTOR_ADDR) 
+	     && (vector_addr != (unsigned int *)IRQ_VECTOR_ADDR)) {
 		printf("Invalid vector address passed to install_handler\n");
 		return -1;
 	}
 	vector_inst = *vector_addr;
 	offset = vector_inst & LDR_INST_OFFSET;
+
 	/*
 	 * validate the LDR instruction stored at SWI vector
 	 */
@@ -60,23 +51,6 @@ int install_handler(unsigned int *vector_addr, void *handler_addr)
 	 */
 	def_handler_loc = (unsigned int *)(*(unsigned int *)((char *)vector_addr + 
 												 ACTUAL_PC_OFFSET + offset));
-#if 0
-	/*
-	 * save the existing instructions in the default handler
-	 */
-	switch ((unsigned int)vector_addr) {
-		case SWI_VECTOR_ADDR:
-			def_swi_handler_inst1 = *def_handler_loc;
-			def_swi_handler_inst2 = *(def_handler_loc +1);
-			def_swi_handler_loc = def_handler_loc;
-			break;
-		case IRQ_VECTOR_ADDR:
-			def_irq_handler_inst1 = *def_handler_loc;
-			def_irq_handler_inst2 = *(def_handler_loc +1);
-			def_irq_handler_loc = def_handler_loc;
-			break;		
-		}
-#endif 	
 	/*
 	 * overwrite the 1st 2 instructions of the default handler
 	 */
@@ -99,6 +73,7 @@ int install_handler(unsigned int *vector_addr, void *handler_addr)
 void C_SWI_Handler(int swi_num, unsigned int *sp)
 {
 	unsigned int r0, r1, r2;
+	enable_interrupts();
 	switch(swi_num) {
 		case READ_SWI:
 			r0 = *sp;
@@ -119,48 +94,28 @@ void C_SWI_Handler(int swi_num, unsigned int *sp)
 			r0 = *sp;
 		    sleep_syscall((unsigned long)r0);
 			break;
-#if 0
-		case EXIT_SWI:
-			/*
-			 * restore the original s_handler and i_handler before dying 
-			 */
-			*def_swi_handler_loc = def_swi_handler_inst1;
-			*(def_swi_handler_loc + 1) = def_swi_handler_inst2;
-			*def_irq_handler_loc = def_irq_handler_inst1;
-			*(def_irq_handler_loc + 1) = def_irq_handler_inst2;
-			/*
-			 * disable interrupts before handing over control to uboot
-			 */
-			disable_intr();
+		case CREATE_SWI:
+			disable_interrupts();
 			r0 = *sp;
-			kexit((int)r0);
-			break;
-#endif
+			r1 = *(sp + 1);
+			*sp = task_create((task_t *)r0, (size_t)r1);
+		break;
 		default:
-		    printf("\n C_SWI_Handler:invalid SWI call,bail out with error\n");
-			/*
-			 * invalid swi call, bail out after marking failure 
-			 * restore the original s_handler before dying 
-			 
-			*def_swi_handler_loc = def_swi_handler_inst1;
-			*(def_swi_handler_loc + 1) = def_swi_handler_inst2;
-			*def_irq_handler_loc = def_irq_handler_inst1;
-			*(def_irq_handler_loc + 1) = def_irq_handler_inst2;
-			kexit(0xbadc0de);
-			*/
+		    printf("\n C_SWI_Handler:invalid SWI call, panic\n");
 			invalid_syscall(swi_num);	
 	}
 	return;
 }
-#if 0
+
 /*
  * implementation of the C_IRQ_Handler
  * @param: void
  * @return: void 
  */
-void C_IRQ_Handler(void) 
+void irq_handler(void) 
 {
 	uint32_t icpr_reg, osmr0_mask, ossr_reg;
+	printf("inside irq handler\n");
 	/*
 	 * identify the source of IRQ
 	 */
@@ -178,15 +133,18 @@ void C_IRQ_Handler(void)
 	/*
 	 * redirect control to timer handler
 	 */
-	 handle_timer_irq();
+	timer_handler(icpr_reg);
 
 	 /*
 	  * acknowlegde the timer IRQ
+//	do {
+//		printf("inside do while loop\n");
+		ossr_reg = reg_read(OSTMR_OSSR_ADDR);
+		ossr_reg |= OSTMR_OSSR_M0;
+		reg_write(OSTMR_OSSR_ADDR, ossr_reg);
+//		ossr_reg &= ~OSTMR_OSSR_M0;
+//	} while(reg_read(OSTMR_OSSR_ADDR) != ossr_reg);
 	  */
-	ossr_reg = reg_read(OSTMR_OSSR_ADDR);
-	ossr_reg |= OSTMR_OSSR_M0;
-	reg_write(OSTMR_OSSR_ADDR, ossr_reg);
-	ossr_reg = reg_read(OSTMR_OSSR_ADDR);
 	return;
 }
 
@@ -215,4 +173,3 @@ void init_irq_regs(void)
 	
 	return;
 }
-#endif
