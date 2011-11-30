@@ -12,6 +12,7 @@
 	.align 2
 	.global s_handler
 	.global enter_user_mode
+	.global get_kernel_sp
 
 @ custom s_handler implementation
 s_handler:
@@ -29,7 +30,15 @@ s_handler:
 	mov r1, sp                    @ setup 2nd arg for C_SWI_Handler
 	ldr r0, [lr, #-WORD_OFFSET] 
 	bic r0, r0, #SWI_NUM_MASK     @ setup 1st arg for C_SWI_Handler
+
+	stmfd sp, {sp, lr}^
+	add sp, sp, #-8
+
 	bl C_SWI_Handler              @hand off control to C_SWI_Handler
+
+	ldmfd sp, {sp, lr}^
+	add sp, sp, #8
+
 	ldr r2, [sp, #SPSR_STACK_OFFSET]
 	msr spsr, r2                  @ restore spsr
 	ldmfd sp!, {r0-r12, lr}       @unwind stack and return to caller 
@@ -80,3 +89,7 @@ disable_intr:
 	msr cpsr, r0
 	mov pc, lr
 #endif
+
+get_kernel_sp:
+	mov r0, sp
+	mov pc, lr

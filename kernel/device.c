@@ -45,8 +45,11 @@ static dev_t devices[NUM_DEVICES];
  */
 void dev_init(void)
 {
-   /* the following line is to get rid of the warning and should not be needed */	
-   devices[0]=devices[0];
+	int i;
+	for(i = 0; i < NUM_DEVICES; i++) {
+		devices[i].next_match = dev_freq[i];
+		devices[i].sleep_queue = NULL;
+	}
 }
 
 
@@ -58,7 +61,18 @@ void dev_init(void)
  */
 void dev_wait(unsigned int dev)
 {
-	
+//	printf("dev wait called for dev %u by task %u\n", dev, get_cur_tcb()->cur_prio);
+	tcb_t *cur_tcb = get_cur_tcb();
+
+	/*
+	 * Add the current task to the head of the sleep queue of device dev
+	 */
+	cur_tcb->sleep_queue = devices[dev].sleep_queue;
+	devices[dev].sleep_queue = cur_tcb;
+    /*
+	 * put this task to sleep and run the next highest priority task
+	 */
+	dispatch_sleep();
 }
 
 
@@ -71,6 +85,35 @@ void dev_wait(unsigned int dev)
  */
 void dev_update(unsigned long millis)
 {
-	
+	int i;
+	tcb_t *temp_tcb;
+//	printf("dev update called with millis %lu\n dev[0].next_match is %lu", millis, devices[0].next_match);
+	/*
+	 * for each device, check if its next match value matches the current
+	 * time in millis. If so, wake up all tasks sleeping on that device.
+	 * update next match for that device. 
+	 */
+
+	for(i = 0; i < NUM_DEVICES; i++) {
+	 	if(devices[i].next_match == millis) {
+//			printf("\n next_match match for device %d\n", i);
+			while(devices[i].sleep_queue != NULL) {
+				temp_tcb = devices[i].sleep_queue;
+//				printf("\n adding task %u to run_queue\n", temp_tcb->cur_prio);
+				runqueue_add(temp_tcb, temp_tcb->cur_prio);
+				devices[i].sleep_queue = temp_tcb->sleep_queue;
+				temp_tcb->sleep_queue = NULL;
+			}
+
+			/*
+			 * check for integer overflow with next_match
+			 */
+			if((devices[i].next_match + dev_freq[i]) < devices[i].next_match) {
+				printf("OVERFLOW IN NEXT_MATCH OF DEVICE %d \n", i);
+				printf("THIS DEVICE IS NOT USABLE ANYMORE. \n");
+			}
+			devices[i].next_match += dev_freq[i];
+		}
+	}
 }
 

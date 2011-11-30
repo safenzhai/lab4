@@ -148,7 +148,10 @@ int task_create(task_t* tasks, size_t num_tasks)
 	 * setup the run queues
 	 */
 	runqueue_init();
-
+	/*
+	 * setup the devices
+	 */
+	dev_init();
 	/*
 	 * allocate the tcb's for all tasks
 	 */
@@ -174,7 +177,21 @@ int task_create(task_t* tasks, size_t num_tasks)
 
 int event_wait(unsigned int dev)
 {
-  return 1; /* remove this line after adding your code */	
+	/*
+	 * validate the dev number
+	 */
+	if(dev >= NUM_DEVICES) {
+		printf("Invalid device number given to event_wait\n");
+		return -EINVAL;
+	}
+
+	dev_wait(dev);
+	printf("returned from dev_wait\n");
+	/*
+	 * put this task to sleep and run the next highest priority task
+	dispatch_sleep();
+	 */
+	return 0;
 }
 
 /* An invalid syscall causes the kernel to exit. */

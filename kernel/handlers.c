@@ -73,32 +73,41 @@ int install_handler(unsigned int *vector_addr, void *handler_addr)
 void C_SWI_Handler(int swi_num, unsigned int *sp)
 {
 	unsigned int r0, r1, r2;
-	enable_interrupts();
 	switch(swi_num) {
 		case READ_SWI:
+			enable_interrupts();
 			r0 = *sp;
 			r1 = *(sp + 1);
 			r2 = *(sp + 2);
 			*sp = read_syscall((int)r0, (void *)r1, (size_t)r2);
 			break;
 		case WRITE_SWI:
+			enable_interrupts();
 			r0 = *sp;
 			r1 = *(sp + 1);
 			r2 = *(sp + 2);
 			*sp = write_syscall((int)r0, (const void *)r1, (size_t)r2);
 			break;
 		case TIME_SWI:
+			enable_interrupts();
 			*sp = time_syscall();
 			break;
 		case SLEEP_SWI:
+			enable_interrupts();
 			r0 = *sp;
 		    sleep_syscall((unsigned long)r0);
 			break;
 		case CREATE_SWI:
-			disable_interrupts();
 			r0 = *sp;
 			r1 = *(sp + 1);
 			*sp = task_create((task_t *)r0, (size_t)r1);
+		break;
+		case EVENT_WAIT:
+			printf("calling event_wait sp is %p\n", sp);
+			r0 = *sp;
+			*sp = event_wait((unsigned int)r0);
+//			while(1);	
+			printf("returned from event_wait\n");
 		break;
 		default:
 		    printf("\n C_SWI_Handler:invalid SWI call, panic\n");
@@ -115,7 +124,7 @@ void C_SWI_Handler(int swi_num, unsigned int *sp)
 void irq_handler(void) 
 {
 	uint32_t icpr_reg, osmr0_mask, ossr_reg;
-	printf("inside irq handler\n");
+//	printf("inside irq handler\n");
 	/*
 	 * identify the source of IRQ
 	 */

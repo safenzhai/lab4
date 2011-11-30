@@ -12,6 +12,7 @@
 #include <kernel.h>
 #include <config.h>
 #include "sched_i.h"
+#include "sched.h"
 #include <arm/reg.h>
 #include <arm/psr.h>
 #include <arm/exception.h>
@@ -44,6 +45,8 @@ void setup_task_context(task_t *task, tcb_t *tcb, uint8_t prio)
 	context->r5 = (uint32_t)task->data;
 	context->r6 = (uint32_t)task->stack_pos;
 	context->sp = (void *)(tcb->kstack_high);
+	context->lr = launch_task;
+
 	printf("after setting up context %u %u %u sp is %u \n", (tcb->context).r4, (tcb->context).r5, (tcb->context).r6, (tcb->context).sp);
 	printf("tcb->kstack_high is %x\n", (uint32_t)tcb->kstack_high);
 	printf("&(tcb->kstack_high) is %x\n", (uint32_t)(&(tcb->kstack_high)));

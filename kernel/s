@@ -1,0 +1,3889 @@
+ls
+D.txt  dagger*      kernel*      mn.sh*  test.bin*
+a.out  dagger.bin*  kernel.bin*  test*
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm dagg*
+[root@group10 bins]# ls
+D.txt  a.out  kernel*  kernel.bin*  mn.sh*  test*  test.bin*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM>    reset
+resetting ...
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  1  0 
+Instruction Cache is ON
+Found gumstix-factory.script on MMC...
+## Executing script at a2000000
+reading uimage
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,set) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:35 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# rm kern*
+[root@group10 bins]# rm dagger*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7100 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734701936 
+tcb->kstack_high is a3003d70
+&(tcb->kstack_high) is a3003d70
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706088 
+tcb->kstack_high is a3004da8
+&(tcb->kstack_high) is a3004da8
+setting stuff in idle's tcb a3041ac8
+setting up context with a3000cbc 00000000 a3042b00
+after setting up context 2734689468 0 2734959360 sp is 2734959360 
+tcb->kstack_high is a3042b00
+&(tcb->kstack_high) is a3042b00
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d38
+run_list[2] = a3003d70
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041ac8
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+#
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003d70  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,clear) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: 
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+cd[root@group10 ~]# cd bins
+[root@group10 bins]# rm kern*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 test    dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7100 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734701936 
+tcb->kstack_high is a3003d70
+&(tcb->kstack_high) is a3003d70
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706088 
+tcb->kstack_high is a3004da8
+&(tcb->kstack_high) is a3004da8
+setting stuff in idle's tcb a3041ac8
+setting up context with a3000cbc 00000000 a3042b00
+after setting up context 2734689468 0 2734959360 sp is 2734959360 
+tcb->kstack_high is a3042b00
+&(tcb->kstack_high) is a3042b00
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d38
+run_list[2] = a3003d70
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041ac8
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+#
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003d70  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+Found gumstix-factory.script on MMC...
+## Executing script at a2000000
+reading uimage
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,set) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# objdump -D kernel > D.txt 
+[root@group10 bins]# vi D.txt 
+"D.txt" 2410L, 95084Ckernel:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+a3000000 <_start>:
+a3000000:   e1a02008    mov r2, r8
+a3000004:   ea00000a    b   a3000034 <kmain>
+
+a3000008 <panic>:
+a3000008:   e92d000f    stmdb   sp!, {r0, r1, r2, r3}
+a300000c:   e24dd004    sub sp, sp, #4  ; 0x4
+a3000010:   e28d3008    add r3, sp, #8  ; 0x8
+a3000014:   e59f0014    ldr r0, [pc, #20]   ; a3000030 <.text+0x30>
+a3000018:   e58d3000    str r3, [sp]
+a300001c:   eb00049f    bl  a30012a0 <printf>
+a3000020:   e10f3000    mrs r3, CPSR
+a3000024:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000028:   e121f003    msr CPSR_c, r3
+a300002c:   eafffffe    b   a300002c <panic+0x24>
+a3000030:   a3001400    movwge  r1, #1024   ; 0x400
+
+a3000034 <kmain>:/deadbeefa3000f94 <already_launched>:
+a3000f94:   e8906ff0    ldmia   r0, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000f98:   e1a0f00e    mov pc, lr
+
+a3000f9c <ctx_switch_half>:
+a3000f9c:   e5904000    ldr r4, [r0]
+a3000fa0:   e5905004    ldr r5, [r0, #4]
+a3000fa4:   e5906008    ldr r6, [r0, #8]
+a3000fa8:   e590d020    ldr sp, [r0, #32]
+a3000fac:   eaffffe2    b   a3000f3c <launch_task>
+a3000fb0:   deadbeef    cdple   14, 10, cr11, cr13, cr15, {7}
+a3000fb4:   a3042b04    movwge  r2, #19204  ; 0x4b04
+a3000fb8:   a3042b00    movwge  r2, #19200  ; 0x4b00
+
+a3000fbc <runqueue_init>:
+a3000fbc:   e59f3038    ldr r3, [pc, #56]   ; a3000ffc <.text+0xffc>
+a3000fc0:   e59f1038    ldr r1, [pc, #56]   ; a3001000 <.text+0x1000>
+a3000fc4:   e3a02000    mov r2, #0  ; 0x0
+a3000fc8:   e5c32000    strb    r2, [r3]
+a3000fcc:   e3a03000    mov r3, #0  ; 0x0
+a3000fd0:   e4813004    str r3, [r1], #4
+a3000fd4:   e59f3028    ldr r3, [pc, #40]   ; a3001004 <.text+0x1004>:q/\<deadbeef\>search hit BOTTOM, continuing at TOP/\<deadbeef\>search hit BOTTOM, continuing at TOP/\<a3000fb0\>search hit BOTTOM, continuing at TOPa3000f3c <launch_task>:
+a3000f3c:   e1a00005    mov r0, r5
+a3000f40:   e3a01000    mov r1, #0  ; 0x0
+a3000f44:   e3a02000    mov r2, #0  ; 0x0
+a3000f48:   e3a03000    mov r3, #0  ; 0x0
+a3000f4c:   e3a05000    mov r5, #0  ; 0x0
+a3000f50:   e3a08000    mov r8, #0  ; 0x0
+a3000f54:   e3a0c000    mov ip, #0  ; 0x0
+a3000f58:   e321f010    msr CPSR_c, #16 ; 0x10
+a3000f5c:   e1a0d006    mov sp, r6
+a3000f60:   e3a06000    mov r6, #0  ; 0x0
+a3000f64:   e59fe044    ldr lr, [pc, #68]   ; a3000fb0 <.text+0xfb0>
+a3000f68:   e1a0f004    mov pc, r4
+
+a3000f6c <ctx_switch_full>:
+a3000f6c:   e8816ff0    stmia   r1, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000f70:   e59f103c    ldr r1, [pc, #60]   ; a3000fb4 <.text+0xfb4>
+a3000f74:   e5912000    ldr r2, [r1]
+a3000f78:   e7903002    ldr r3, [r0, r2]
+a3000f7c:   e59f1034    ldr r1, [pc, #52]   ; a3000fb8 <.text+0xfb8>
+a3000f80:   e5912000    ldr r2, [r1]
+a3000f84:   e0801002    add r1, r0, r2
+a3000f88:   e1530001    cmp r3, r1
+search hit BOTTOM, continuing at TOP:q[root@group10 bins]# objdup mp -D dagger > D.txt 
+[root@group10 bins]# vi D.txt 
+"D.txt" 208L, 7373Cdagger:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:   e3a0b000    mov fp, #0  ; 0x0
+a0000004:   e3a0e000    mov lr, #0  ; 0x0
+a0000008:   e59d0000    ldr r0, [sp]
+a000000c:   e28d1004    add r1, sp, #4  ; 0x4
+a0000010:   eb000000    bl  a0000018 <main>
+
+a0000014 <loop>:
+a0000014:   eafffffe    b   a0000014 <loop>
+
+a0000018 <main>:
+a0000018:   e52de004    str lr, [sp, #-4]!
+a000001c:   e59f3068    ldr r3, [pc, #104]  ; a000008c <.text+0x8c>
+a0000020:   e24dd028    sub sp, sp, #40 ; 0x28
+a0000024:   e3a02001    mov r2, #1  ; 0x1
+a0000028:   e58d3000    str r3, [sp]
+a000002c:   e3a03040    mov r3, #64 ; 0x40
+a0000030:   e58d3004    str r3, [sp, #4]/a0000118a00000f4:   e3a00000    mov r0, #0  ; 0x0
+a00000f8:   eb000005    bl  a0000114 <event_wait>
+a00000fc:   e3500000    cmp r0, #0  ; 0x0
+a0000100:   e59f0008    ldr r0, [pc, #8]    ; a0000110 <.text+0x110>
+a0000104:   aafffff6    bge a00000e4 <fun1+0x8>
+a0000108:   ebffffe2    bl  a0000098 <panic>
+a000010c:   eafffff4    b   a00000e4 <fun1+0x8>
+a0000110:   a0000230    andge   r0, r0, r0, lsr r2
+
+a0000114 <event_wait>:
+a0000114:   ef900014    svc 0x00900014
+a0000118:   e3500000    cmp r0, #0  ; 0x0
+a000011c:   a1a0f00e    movge   pc, lr
+a0000120:   e2601000    rsb r1, r0, #0  ; 0x0
+a0000124:   e59f2008    ldr r2, [pc, #8]    ; a0000134 <.text+0x134>
+a0000128:   e5821000    str r1, [r2]
+a000012c:   e3e00000    mvn r0, #0  ; 0x0
+a0000130:   e1a0f00e    mov pc, lr
+a0000134:   a0000248    andge   r0, r0, r8, asr #4
+
+a0000138 <task_create>:
+a0000138:   ef90000a    svc 0x0090000a
+a000013c:   e3500000    cmp r0, #0  ; 0x0:q[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm kern*
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# ls
+D.txt  dagger*      kernel*      mn.sh*  test.bin*
+a.out  dagger.bin*  kernel.bin*  test*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 test.     dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kene  rnel.bin
+reading kernel.bin
+
+7108 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+.---------------------------------------------------------------------------.
+| 00000000       d4ffffa2 02000000 01000000 c8000000       ................ |
+| 00000010       dcefeda3 e402eea3 02000000 00000000       ................ |
+| 00000020       dcefeda3 3002eea3 00000000 00000000       ....0........... |
+| 00000030       d0000060 3c0100a0 01000000 000000a3       ...`<........... |
+| 00000040       908ef0a3 e06df2a3 0003eea3 00000000       .....m.......... |
+| 00000050       b041f1a3 00000000 4802eea3 00000000       .A......H....... |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 182bf1a3 00000000       .........+...... |
+| 00000090       00000000 3002eea3 30ededa3 68ededa3       ....0...0...h... |
+`---------------------------------------------------------------------------'
+ 0 
+Instruction Cache is ON
+Found gumstix-factory.script on MMC...
+## Executing script at a2000000
+reading uimage
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,clear) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:35 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# objdump -D dagger > D.txt 
+[root@group10 bins]# vi D.txt 
+"D.txt" 208L, 7373Cdagger:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:   e3a0b000    mov fp, #0  ; 0x0
+a0000004:   e3a0e000    mov lr, #0  ; 0x0
+a0000008:   e59d0000    ldr r0, [sp]
+a000000c:   e28d1004    add r1, sp, #4  ; 0x4
+a0000010:   eb000000    bl  a0000018 <main>
+
+a0000014 <loop>:
+a0000014:   eafffffe    b   a0000014 <loop>
+
+a0000018 <main>:
+a0000018:   e52de004    str lr, [sp, #-4]!
+a000001c:   e59f3068    ldr r3, [pc, #104]  ; a000008c <.text+0x8c>
+a0000020:   e24dd028    sub sp, sp, #40 ; 0x28
+a0000024:   e3a02001    mov r2, #1  ; 0x1
+a0000028:   e58d3000    str r3, [sp]
+a000002c:   e3a03040    mov r3, #64 ; 0x40
+a0000030:   e58d3004    str r3, [sp, #4]/a0000132search hit BOTTOM, continuing at TOPE486: Pattern not found: a0000132
+/a0000132ca0000118:   e3500000    cmp r0, #0  ; 0x0
+a000011c:   a1a0f00e    movge   pc, lr
+a0000120:   e2601000    rsb r1, r0, #0  ; 0x0
+a0000124:   e59f2008    ldr r2, [pc, #8]    ; a0000134 <.text+0x134>
+a0000128:   e5821000    str r1, [r2]
+a000012c:   e3e00000    mvn r0, #0  ; 0x0
+a0000130:   e1a0f00e    mov pc, lr
+a0000134:   a0000248    andge   r0, r0, r8, asr #4
+
+a0000138 <task_create>:
+a0000138:   ef90000a    svc 0x0090000a
+a000013c:   e3500000    cmp r0, #0  ; 0x0
+a0000140:   a1a0f00e    movge   pc, lr
+a0000144:   e2601000    rsb r1, r0, #0  ; 0x0
+a0000148:   e59f2008    ldr r2, [pc, #8]    ; a0000158 <.text+0x158>
+a000014c:   e5821000    str r1, [r2]
+a0000150:   e3e00000    mvn r0, #0  ; 0x0
+a0000154:   e1a0f00e    mov pc, lr
+a0000158:   a0000248    andge   r0, r0, r8, asr #4
+
+a000015c <putchar>:
+a000015c:   e52de004    str lr, [sp, #-4]!
+a0000160:   e24dd004    sub sp, sp, #4  ; 0x4a00
+
+:q[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm kern*
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 test.bin        dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7180 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734702016 
+tcb->kstack_high is a3003dc0
+&(tcb->kstack_high) is a3003dc0
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706168 
+tcb->kstack_high is a3004df8
+&(tcb->kstack_high) is a3004df8
+setting stuff in idle's tcb a3041b18
+setting up context with a3000cbc 00000000 a3042b50
+after setting up context 2734689468 0 2734959440 sp is 2734959440 
+tcb->kstack_high is a3042b50
+&(tcb->kstack_high) is a3042b50
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d88
+run_list[2] = a3003dc0
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041b18
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+inside dispatch sleep hexdump of cur->context is
+.---------------------------------------------------------------------------.
+| 00000000       dc0000a0 00000000 000000a2 00000000       ................ |
+| 00000010       dcefeda3 3002eea3 00000000 00000000       ....0........... |
+| 00000020       943d00a3 c00700a3 00000000 00000000       .=.............. |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       00000000 00000000 00000000 00000000       ................ |
+| 00000050       00000000 00000000 00000000 00000000       ................ |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+`---------------------------------------------------------------------------'
+#
+inside dispatch sleep hexdump of cur->context is
+.---------------------------------------------------------------------------.
+| 00000000       a40000a0 00000000 000000a1 00000000       ................ |
+| 00000010       dcefeda3 3002eea3 00000000 00000000       ....0........... |
+| 00000020       cc4d00a3 c00700a3 00000000 00000000       .M.............. |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       00000000 00000000 00000000 00000000       ................ |
+| 00000050       00000000 00000000 00000000 00000000       ................ |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+`---------------------------------------------------------------------------'
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003dc0  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+Found gumstix-factory.script on MMC...
+## Executing script at a2000000
+reading uimage
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+
+Starting 32kHz clock...Settled
+Set (AF1,out,set) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# reboot
+[root@group10 ~]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> md 0xa3003d94 40
+a3003d94: 00000000 00000000 a3ee0230 00000000    ........0.......
+a3003da4: 00000000 00000000 a3003dc0 a0000118    .........=......
+a3003db4: dead3ef0 60000010 e2899001 00000202    .>.....`........
+a3003dc4: a3004dbc 00900014 00000000 00000000    .M..............
+a3003dd4: a3edefdc a3ee0230 00000000 00000000    ....0...........
+a3003de4: a3004dac a3000a7c 00000000 00000000    .M..|...........
+a3003df4: 00000000 00000000 00000000 00000000    ................
+a3003e04: 00000000 00000000 00000000 00000000    ................
+a3003e14: 00000000 00000000 00000000 00000000    ................
+a3003e24: 00000000 00000000 00000000 00000000    ................
+a3003e34: 00000000 00000000 00000000 00000000    ................
+a3003e44: 00000000 00000000 00000000 00000000    ................
+a3003e54: 00000000 00000000 00000000 00000000    ................
+a3003e64: 00000000 00000000 00000000 00000000    ................
+a3003e74: 00000000 00000000 00000000 00000000    ................
+a3003e84: 00000000 00000000 00000000 00000000    ................
+GUM> :wq
+Unknown command ':wq' - try 'help'
+GUM> reset
+resetting ...
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  1  0 
+Instruction Cache is ON
+Found gumstix-factory.script on MMC...
+## Executing script at a2000000
+reading uimage
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,clear) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm kern*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7172 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734702008 
+tcb->kstack_high is a3003db8
+&(tcb->kstack_high) is a3003db8
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706160 
+tcb->kstack_high is a3004df0
+&(tcb->kstack_high) is a3004df0
+setting stuff in idle's tcb a3041b10
+setting up context with a3000cc4 00000000 a3042b48
+after setting up context 2734689476 0 2734959432 sp is 2734959432 
+tcb->kstack_high is a3042b48
+&(tcb->kstack_high) is a3042b48
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d80
+run_list[2] = a3003db8
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041b10
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+in dispatch sleep, sp is 2734701920
+.---------------------------------------------------------------------------.
+| 00000000       7c3d00a3 14009000 840a00a3 bc0600a3       |=.............. |
+| 00000010       40000000 00000000 fc0600a3 00000000       @............... |
+| 00000020       f0ffffa1 04000000 00000000 40000000       ............@... |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       3002eea3 00000000 00000000 00000000       0............... |
+| 00000050       180100a0 10000020 02020000 a40000a0       ................ |
+| 00000060       23000000 000000a1 00000000 00000000       #............... |
+| 00000070       00000000 00000000 00000000 f04d00a3       .............M.. |
+| 00000080       bebafeca 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+| 000000a0       00000000 00000000 00000000 00000000       ................ |
+| 000000b0       00000000 00000000 00000000 00000000       ................ |
+| 000000c0       00000000 00000000                         ........         |
+`---------------------------------------------------------------------------'
+#
+in dispatch sleep, sp is 2734706072
+.---------------------------------------------------------------------------.
+| 00000000       b44d00a3 14009000 840a00a3 bc0600a3       .M.............. |
+| 00000010       23000000 00000000 fc0600a3 01000000       #............... |
+| 00000020       f0ffffa0 04000000 00000000 23000000       ............#... |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       3002eea3 00000000 00000000 00000000       0............... |
+| 00000050       180100a0 10000020 00000000 00000000       ................ |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+| 000000a0       00000000 00000000 00000000 00000000       ................ |
+| 000000b0       00000000 00000000 00000000 00000000       ................ |
+| 000000c0       00000000 00000000                         ........         |
+`---------------------------------------------------------------------------'
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003db8  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# objdump -D kernel > D.txt 
+[root@group10 bins]# vi D.txt 
+"D.txt" 2430L, 95901Ckernel:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+a3000000 <_start>:
+a3000000:   e1a02008    mov r2, r8
+a3000004:   ea00000a    b   a3000034 <kmain>
+
+a3000008 <panic>:
+a3000008:   e92d000f    stmdb   sp!, {r0, r1, r2, r3}
+a300000c:   e24dd004    sub sp, sp, #4  ; 0x4
+a3000010:   e28d3008    add r3, sp, #8  ; 0x8
+a3000014:   e59f0014    ldr r0, [pc, #20]   ; a3000030 <.text+0x30>
+a3000018:   e58d3000    str r3, [sp]
+a300001c:   eb0004a9    bl  a30012c8 <printf>
+a3000020:   e10f3000    mrs r3, CPSR
+a3000024:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000028:   e121f003    msr CPSR_c, r3
+a300002c:   eafffffe    b   a300002c <panic+0x24>
+a3000030:   a3001428    movwge  r1, #1064   ; 0x428
+
+a3000034 <kmain>:/event_waita300068c:   e10f3000    mrs r3, CPSR
+a3000690:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000694:   e121f003    msr CPSR_c, r3
+a3000698:   e8910003    ldmia   r1, {r0, r1}
+a300069c:   eb00012e    bl  a3000b5c <task_create>
+a30006a0:   e5840000    str r0, [r4]
+a30006a4:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006a8:   e10f3000    mrs r3, CPSR
+a30006ac:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b0:   e121f003    msr CPSR_c, r3
+a30006b4:   e5910000    ldr r0, [r1]
+a30006b8:   eb0000e8    bl  a3000a60 <event_wait>
+a30006bc:   eafffff7    b   a30006a0 <.text+0x6a0>
+a30006c0:   e59f0008    ldr r0, [pc, #8]    ; a30006d0 <.text+0x6d0>
+a30006c4:   eb0002ff    bl  a30012c8 <printf>
+a30006c8:   e1a00005    mov r0, r5
+a30006cc:   eb0000ad    bl  a3000988 <invalid_syscall>
+a30006d0:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}/event_waita3000a38:   1affffe6    bne a30009d8 <sort_all_tasks+0x30>
+a3000a3c:   e28aa001    add sl, sl, #1  ; 0x1
+a3000a40:   e2866014    add r6, r6, #20 ; 0x14
+a3000a44:   e1a07009    mov r7, r9
+a3000a48:   e157000b    cmp r7, fp
+a3000a4c:   1affffdd    bne a30009c8 <sort_all_tasks+0x20>
+a3000a50:   e3a00000    mov r0, #0  ; 0x0
+a3000a54:   e28dd004    add sp, sp, #4  ; 0x4
+a3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+a3000aa8:   ebfffda0    bl  a3000130 <valid_addr>
+a3000aac:   e3500000    cmp r0, #0  ; 0x0
+a3000ab0:   e3a01004    mov r1, #4  ; 0x4
+a3000ab4:   e3a0220a    mov r2, #-1610612736    ; 0xa0000000
+a3000ab8:   e3a034a3    mov r3, #-1560281088    ; 0xa3000000
+a3000abc:   059f0084    ldreq   r0, [pc, #132]  ; a3000b48 <.text+0xb48>
+a3000ac0:   01a01005    moveq   r1, r5
+a3000ac4:   0a000014    beq a3000b1c <validate_all_tasks+0x8c>
+a3000ac8:   e5940008    ldr r0, [r4, #8]
+a3000acc:   ebfffd97    bl  a3000130 <valid_addr>
+a3000ad0:   e3500000    cmp r0, #0  ; 0x0
+a3000ad4:   059f0070    ldreq   r0, [pc, #112]  ; a3000b4c <.text+0xb4c>0:   eb00010c    bl  a3000eb8 <dispatch_sleep>4:   e3a00000    mov r0, #0  ; 0x08:   e49df004    ldr pc, [sp], #4a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8 <validate_all_tasks>:0:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}460016, r18:   e1a044, r9c:   e3a05000    mov r5, #0  ; 0x00:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>4:   e5940000    ldr r0, [r4]8:   ebfffda0    bl  a3000130 <valid_addr>ac:   e3500000    cmp r0, #0  ; 0x0010041, #4  ; 0x44220a2, #-161061273608:   e3a034a3    mov r3, #-1560281088    ; 0xa3000000bc:   059f0084    ldreq   r0, [pc, #132]  ; a3000b48 <.text+0xb48>0:   01a01005    moveq   r1, r54:   0a000014    beq a3000b1c <validate_all_tasks+0x8c>8:   e5940008    ldr r0, [r4, #8]cc:   ebfffd97    bl  a3000130 <valid_addr>0:   e3500000    cmp r0, #0  ; 0x0a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>a3000a78:   e49df004    ldr pc, [sp], #4
+
+a3000a80:   eb00010c    bl  a30/ctx_switch_halfa3000efc:   ea000024    b   a3000f94 <ctx_switch_full>
+a3000f00:   a3001c30    movwge  r1, #3120   ; 0xc30
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30
+
+a3000f08 <dispatch_nosave>:
+a3000f08:   eb000073    bl  a30010dc <highest_prio>
+a3000f0c:   eb00005c    bl  a3001084 <runqueue_remove>
+a3000f10:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>
+a3000f14:   e1a02000    mov r2, r0
+a3000f18:   e2800004    add r0, r0, #4  ; 0x4
+a3000f1c:   e5832000    str r2, [r3]
+a3000f20:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000f28 <dispatch_save>:
+a3000f28:   e92d4010    stmdb   sp!, {r4, lr}
+a3000f2c:   e59f402c    ldr r4, [pc, #44]   ; a3000f60 <.text+0xf60>
+a3000f30:   e5940000    ldr r0, [r4]
+a3000f34:   e5d01001    ldrb    r1, [r0, #1]
+a3000f38:   eb00003e    bl  a3001038 <runqueue_add>
+a3000f3c:   eb000066    bl  a30010dc <highest_prio>
+a3000f40:   eb00004f    bl  a3001084 <runqueue_remove>
+a3000f44:   e5941000    ldr r1, [r4]/ctx_switch_halfa3000f94 <ctx_switch_full>:
+a3000f94:   e8816ff0    stmia   r1, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000f98:   e59f103c    ldr r1, [pc, #60]   ; a3000fdc <.text+0xfdc>
+a3000f9c:   e5912000    ldr r2, [r1]
+a3000fa0:   e7903002    ldr r3, [r0, r2]
+a3000fa4:   e59f1034    ldr r1, [pc, #52]   ; a3000fe0 <.text+0xfe0>
+a3000fa8:   e5912000    ldr r2, [r1]
+a3000fac:   e0801002    add r1, r0, r2
+a3000fb0:   e1530001    cmp r3, r1
+a3000fb4:   1a000000    bne a3000fbc <already_launched>
+a3000fb8:   eb000001    bl  a3000fc4 <ctx_switch_half>
+
+a3000fbc <already_launched>:
+a3000fbc:   e8906ff0    ldmia   r0, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000fc0:   e1a0f00e    mov pc, lr
+
+a3000fc4 <ctx_switch_half>:
+a3000fc4:   e5904000    ldr r4, [r0]
+a3000fc8:   e5905004    ldr r5, [r0, #4]
+a3000fcc:   e5906008    ldr r6, [r0, #8]
+a3000fd0:   e590d020    ldr sp, [r0, #32]
+a3000fd4:   eaffffe2    b   a3000f64 <launch_task>/ctx_switch_halfa3000fd0:   e590d020    ldr sp, [r0, #32]
+a3000fd4:   eaffffe2    b   a3000f64 <launch_task>
+a3000fd8:   deadbeef    cdple   14, 10, cr11, cr13, cr15, {7}
+a3000fdc:   a3042b4c    movwge  r2, #19276  ; 0x4b4c
+a3000fe0:   a3042b48    movwge  r2, #19272  ; 0x4b48
+
+a3000fe4 <runqueue_init>:
+a3000fe4:   e59f3038    ldr r3, [pc, #56]   ; a3001024 <.text+0x1024>
+a3000fe8:   e59f1038    ldr r1, [pc, #56]   ; a3001028 <.text+0x1028>
+a3000fec:   e3a02000    mov r2, #0  ; 0x0
+a3000ff0:   e5c32000    strb    r2, [r3]
+a3000ff4:   e3a03000    mov r3, #0  ; 0x0
+a3000ff8:   e4813004    str r3, [r1], #4
+a3000ffc:   e59f3028    ldr r3, [pc, #40]   ; a300102c <.text+0x102c>
+a3001000:   e1510003    cmp r1, r3
+a3001004:   1afffffa    bne a3000ff4 <runqueue_init+0x10>
+a3001008:   e59f2020    ldr r2, [pc, #32]   ; a3001030 <.text+0x1030>
+a300100c:   e3a03000    mov r3, #0  ; 0x0
+a3001010:   e4c23001    strb    r3, [r2], #1
+a3001014:   e59f3018    ldr r3, [pc, #24]   ; a3001034 <.text+0x1034>
+a3001018:   e1520003    cmp r2, r3
+a300101c:   1afffffa    bne a300100c <runqueue_init+0x28>
+a3001020:   e12fff1e    bx  lra3000fcc6008r68]0:   e590d020    ldr sp, [r0, #32]4:   eaffffe2    b   a3000f64 <launch_task>8:   deadbeef    cdple   14, 10, cr11, cr13, cr15, {7}dcc6c
+a3000fe0:   a3042b48    movwge  r2, #19272  ; 0x4b48 <runqueue_init>:433448:   e59f1038    ldr r1, [pc, #56]   ; a3001028 <.text+0x1028>ec:   e3a0mov r2, #0  ; 0x00:   e5c32strb    r2, [r3]4:   e3a03000    mov r3, #0  ; 0x08:   e4813004    str1], #40ffc:   e59f3028    ldr r3, [pc, #40]   ; a300102c <.text+0x102c>0:   e1510003    cmp r1, r34:   1afffffa    bne a3000ff4 <runqueue_init+0x10>8:   e59f2020    ldr r2, [pc, #32]   ; a3001030 <.text+0x1030>0c:   e3a03000    mov r3, #0  ; 0x00:   e4c23001    strb    r3, [r2], #14:   e59f3018    ldr r3, [pc, #24]   ; a3001034 <.text+0x1034>8:   e1520003    cmp r2, r31c:   1afffffa    bne a300100c <runqueue_init+0x28>a3000fc8:   e5905004    ldr r5, [r0, #4]a3000fc4:   e5904000    ldr r4, [r0]a3000fc4 <ctx_switch_half>:a3000fc0:   e1a0f00e    mov pc, lra3000fbc:   e8906ff0    ldmia   r0, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}a3000fbc <already_launched>:
+
+a3000fb8:   eb000001    bl  a3000fc4 <ctx_switch_half>a3000fb4:   1a000000    bne a3000fbc <already_launched>a3000fb0:   e1530001    cmp r3, r1a3000fac:   e0801002    add r1, r0, r2a3000fa8:   e5912000    ldr r2, [r1]a3000fa4:   e59f1034    ldr r1, [pc, #52]   ; a3000fe0 <.text+0xfe0>a3000fa0:   e7903002    ldr r3, [r0, r2]a3000f9c:   e5912000    ldr r2, [r1]a3000f98:   e59f103c    ldr r1, [pc, #60]   ; a3000fdc <.text+0xfdc>a3000f94:   e8816ff0    stmia   r1, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}a3000f94 <ctx_switch_full>:a3000f90:   e1a0f004    mov pc, r4a3000f8c:   e59fe044    ldr lr, [pc, #68]   ; a3000fd8 <.text+0xfd8>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a3000fbc:   e8906ff0    ldmia3000f88:   e3a06000    mov r6, #0  ; 0x0a3000f84:   e1a0d006    mov sp, r6a3000f80:   e321f010    msr CPSR_c, #16 ; 0x10a3000f7c:   e3a0c000    mov ip, #0  ; 0x0a3000f78:   e3a08000    mov r8, #0  ; 0x0a3000f74:   e3a05000    mov r5, #0  ; 0x0a3000f70:   e3a03000    mov r3, #0  ; 0x0a3000f6c:   e3a02000    mov r2, #0  ; 0x0a3000f68:   e3a01000    mov r1, #0  ; 0x0a3000f64:   e1a00005    mov r0, r5a3000f64 <launch_task>:a3000f60:   a3001c30    movwge  r1, #3120   ; 0xc30a3000f5c:   ea00000c    b   a3000f94 <ctx_switch_full>a3000f58:   e8bd4010    ldmia   sp!, {r4, lr}a3000f54:   e5843000    str r3, [r4]a3000f50:   e2811004    add r1, r1, #4  ; 0x4a3000f4c:   e2800004    add r0, r0, #4  ; 0x4a3000f48:   e1a03000    mov r3, r0a3000f44:   e5941000    ldr r1, [r4]/dispatch_slrreepsearch hit BOTTOM, continuing at TOPa3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+search hit BOTTOM, continuing at TOP/dispatch_sleepa3000e98:   e5933000    ldr r3, [r3]
+a3000e9c:   e5d30001    ldrb    r0, [r3, #1]
+a3000ea0:   e12fff1e    bx  lr
+a3000ea4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000ea8 <get_cur_tcb>:
+a3000ea8:   e59f3004    ldr r3, [pc, #4]    ; a3000eb4 <.text+0xeb4>
+a3000eac:   e5930000    ldr r0, [r3]
+a3000eb0:   e12fff1e    bx  lr
+a3000eb4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000eb8 <dispatch_sleep>:
+a3000eb8:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a3000ebc:   eb000086    bl  a30010dc <highest_prio>
+a3000ec0:   eb00006f    bl  a3001084 <runqueue_remove>
+a3000ec4:   e59f3034    ldr r3, [pc, #52]   ; a3000f00 <.text+0xf00>
+a3000ec8:   e1a04000    mov r4, r0
+a3000ecc:   e5935000    ldr r5, [r3]
+a3000ed0:   e5830000    str r0, [r3]
+a3000ed4:   ebfffe15    bl  a3000730 <get_kernel_sp>
+a3000ed8:   e1a01000    mov r1, r0
+a3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>a3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>
+a3000ee4:   ebfffe11    bl  a3000730 <get_kernel_sp>
+a3000ee8:   e3a010c8    mov r1, #200    ; 0xc8
+a3000eec:   ebfffd08    bl  a3000314 <hexdump>
+a3000ef0:   e2840004    add r0, r4, #4  ; 0x4
+a3000ef4:   e2851004    add r1, r5, #4  ; 0x4
+a3000ef8:   e8bd4030    ldmia   sp!, {r4, r5, lr}
+a3000efc:   ea000024    b   a3000f94 <ctx_switch_full>
+a3000f00:   a3001c30    movwge  r1, #3120   ; 0xc30
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30
+
+a3000f08 <dispatch_nosave>:
+a3000f08:   eb000073    bl  a30010dc <highest_prio>
+a3000f0c:   eb00005c    bl  a3001084 <runqueue_remove>
+a3000f10:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>
+a3000f14:   e1a02000    mov r2, r0
+a3000f18:   e2800004    add r0, r0, #4  ; 0x4
+a3000f1c:   e5832000    str r2, [r3]
+a3000f20:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000f28 <dispatch_save>:8:   e1a01000    mov r1, r0dc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>0:   eb0000f812c8 <printf>4:   ebfffe11    bl  a3000730 <get_kernel_sp>8:   e3a010c8    mov r1, #200    ; 0xc8ec:   ebfffd08    bl  a3000314 <hexdump>0400, r44:   e2851004    add r1, r5, #4  ; 0x48:   e8bd4030    ldmia   sp!, {r4, r5, lr}efc:   ea000024    b   a3000f94 <ctx_switch_full>0c3120c
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30 <dispatch_nosave>:873dc <highest_prio>0c:   eb00005c    bl  a3001084 <runqueue_remove>0:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>4:   e1a02000    mov r28:   e2800004    add r0, r0, #4  ; 0x41c:   e5832000    str r2, [r3]0:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30a3000ed4:   ebfffe15    bl  a3000730 <get_kernel_sp>
+
+
+
+
+
+
+
+
+
+/event_waitsearch hit BOTTOM, continuing at TOPa300068c:   e10f3000    mrs r3, CPSR
+a3000690:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000694:   e121f003    msr CPSR_c, r3
+a3000698:   e8910003    ldmia   r1, {r0, r1}
+a300069c:   eb00012e    bl  a3000b5c <task_create>
+a30006a0:   e5840000    str r0, [r4]
+a30006a4:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006a8:   e10f3000    mrs r3, CPSR
+a30006ac:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b0:   e121f003    msr CPSR_c, r3
+a30006b4:   e5910000    ldr r0, [r1]
+a30006b8:   eb0000e8    bl  a3000a60 <event_wait>
+a30006bc:   eafffff7    b   a30006a0 <.text+0x6a0>
+a30006c0:   e59f0008    ldr r0, [pc, #8]    ; a30006d0 <.text+0x6d0>
+a30006c4:   eb0002ff    bl  a30012c8 <printf>
+a30006c8:   e1a00005    mov r0, r5
+a30006cc:   eb0000ad    bl  a3000988 <invalid_syscall>
+a30006d0:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+search hit BOTTOM, continuing at TOP/event_waita3000a38:   1affffe6    bne a30009d8 <sort_all_tasks+0x30>
+a3000a3c:   e28aa001    add sl, sl, #1  ; 0x1
+a3000a40:   e2866014    add r6, r6, #20 ; 0x14
+a3000a44:   e1a07009    mov r7, r9
+a3000a48:   e157000b    cmp r7, fp
+a3000a4c:   1affffdd    bne a30009c8 <sort_all_tasks+0x20>
+a3000a50:   e3a00000    mov r0, #0  ; 0x0
+a3000a54:   e28dd004    add sp, sp, #4  ; 0x4
+a3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+a3000aa8:   ebfffda0    bl  a3000130 <valid_addr>
+a3000aac:   e3500000    cmp r0, #0  ; 0x0
+a3000ab0:   e3a01004    mov r1, #4  ; 0x4
+a3000ab4:   e3a0220a    mov r2, #-1610612736    ; 0xa0000000
+a3000ab8:   e3a034a3    mov r3, #-1560281088    ; 0xa3000000
+a3000abc:   059f0084    ldreq   r0, [pc, #132]  ; a3000b48 <.text+0xb48>
+a3000ac0:   01a01005    moveq   r1, r5
+a3000ac4:   0a000014    beq a3000b1c <validate_all_tasks+0x8c>
+a3000ac8:   e5940008    ldr r0, [r4, #8]
+a3000acc:   ebfffd97    bl  a3000130 <valid_addr>
+a3000ad0:   e3500000    cmp r0, #0  ; 0x0
+a3000ad4:   059f0070    ldreq   r0, [pc, #112]  ; a3000b4c <.text+0xb4c>0:   eb00010c    bl  a3000eb8 <dispatch_sleep>4:   e3a00000    mov r0, #0  ; 0x08:   e49df004    ldr pc, [sp], #4a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8 <validate_all_tasks>:0:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}460016, r18:   e1a044, r9c:   e3a05000    mov r5, #0  ; 0x00:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>4:   e5940000    ldr r0, [r4]8:   ebfffda0    bl  a3000130 <valid_addr>ac:   e3500000    cmp r0, #0  ; 0x0010041, #4  ; 0x44220a2, #-161061273608:   e3a034a3    mov r3, #-1560281088    ; 0xa3000000bc:   059f0084    ldreq   r0, [pc, #132]  ; a3000b48 <.text+0xb48>0:   01a01005    moveq   r1, r54:   0a000014    beq a3000b1c <validate_all_tasks+0x8c>8:   e5940008    ldr r0, [r4, #8]cc:   ebfffd97    bl  a3000130 <valid_addr>0:   e3500000    cmp r0, #0  ; 0x0a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>a3000a78:   e49df004    ldr pc, [sp], #4a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+
+
+
+
+a3000a88:   e49df004    ldr pc, [sp][sp][sp][sp]s[sp][sp], /a3003d7csearch hit BOTTOM, continuing at TOPE486: Pattern not found: a3003d7c/s_handlersearch hit BOTTOM, continuing at TOPa30006ac:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b0:   e121f003    msr CPSR_c, r3
+a30006b4:   e5910000    ldr r0, [r1]
+a30006b8:   eb0000e8    bl  a3000a60 <event_wait>
+a30006bc:   eafffff7    b   a30006a0 <.text+0x6a0>
+a30006c0:   e59f0008    ldr r0, [pc, #8]    ; a30006d0 <.text+0x6d0>
+a30006c4:   eb0002ff    bl  a30012c8 <printf>
+a30006c8:   e1a00005    mov r0, r5
+a30006cc:   eb0000ad    bl  a3000988 <invalid_syscall>
+a30006d0:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a30006dc:   e59f0054    ldr r0, [pc, #84]   ; a3000738 <.text+0x738>
+a30006e0:   e5908000    ldr r8, [r0]
+a30006e4:   e14f2000    mrs r2, SPSR
+a30006e8:   e58d2038    str r2, [sp, #56]
+a30006ec:   e1a0100d    mov r1, sp
+a30006f0:   e51e0004    ldr r0, [lr, #-4]
+a30006f4:   e3c004ff    bic r0, r0, #-16777216  ; 0xff000000
+a30006f8:   ebffffb7    bl  a30005dc <C_SWI_Handler>
+search hit BOTTOM, continuing at TOP ebffffb7    bl  a3
+/\<a30005dc\>search hit BOTTOM, continuing at TOPa30005bc <init_irq_regs>:
+a30005bc:   e59f2014    ldr r2, [pc, #20]   ; a30005d8 <.text+0x5d8>
+a30005c0:   e3a03301    mov r3, #67108864   ; 0x4000000
+a30005c4:   e5823004    str r3, [r2, #4]
+a30005c8:   e5923008    ldr r3, [r2, #8]
+a30005cc:   e3c33301    bic r3, r3, #67108864   ; 0x4000000
+a30005d0:   e5823008    str r3, [r2, #8]
+a30005d4:   e12fff1e    bx  lr
+a30005d8:   40d00000    sbcmis  r0, r0, r0
+
+a30005dc <C_SWI_Handler>:
+a30005dc:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a30005e0:   e1a05000    mov r5, r0
+a30005e4:   e1a04001    mov r4, r1
+a30005e8:   e10f3000    mrs r3, CPSR
+a30005ec:   e3c330c0    bic r3, r3, #192    ; 0xc0
+a30005f0:   e121f003    msr CPSR_c, r3
+a30005f4:   e2403609    sub r3, r0, #9437184    ; 0x900000
+a30005f8:   e2433003    sub r3, r3, #3  ; 0x3
+a30005fc:   e3530011    cmp r3, #17 ; 0x11
+a3000600:   979ff103    ldrls   pc, [pc, r3, lsl #2]
+a3000604:   ea00002d    b   a30006c0 <.text+0x6c0>
+search hit BOTTOM, continuing at TOP
+a30005dc:   e92d4030    stmdb   sp!, {}{}r4, r5,{}{}?\<a30005dc\>search hit TOP, continuing at BOTTOMa30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a30006dc:   e59f0054    ldr r0, [pc, #84]   ; a3000738 <.text+0x738>
+a30006e0:   e5908000    ldr r8, [r0]
+a30006e4:   e14f2000    mrs r2, SPSR
+a30006e8:   e58d2038    str r2, [sp, #56]
+a30006ec:   e1a0100d    mov r1, sp
+a30006f0:   e51e0004    ldr r0, [lr, #-4]
+a30006f4:   e3c004ff    bic r0, r0, #-16777216  ; 0xff000000
+a30006f8:   ebffffb7    bl  a30005dc <C_SWI_Handler>
+a30006fc:   e59d2038    ldr r2, [sp, #56]
+a3000700:   e169f002    msr SPSR_fc, r2
+a3000704:   e8bd5fff    ldmia   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a3000708:   e28dd004    add sp, sp, #4  ; 0x4
+a300070c:   e1b0f00e    movs    pc, lr
+
+a3000710 <enter_user_mode>:
+a3000710:   e3a03010    mov r3, #16 ; 0x10
+a3000714:   e3833080    orr r3, r3, #128    ; 0x80
+a3000718:   e10fc000    mrs ip, CPSR
+search hit TOP, continuing at BOTTOMa30005d/\<a30005dc\>search hit BOTTOM, continuing at TOPa30005bc <init_irq_regs>:
+a30005bc:   e59f2014    ldr r2, [pc, #20]   ; a30005d8 <.text+0x5d8>
+a30005c0:   e3a03301    mov r3, #67108864   ; 0x4000000
+a30005c4:   e5823004    str r3, [r2, #4]
+a30005c8:   e5923008    ldr r3, [r2, #8]
+a30005cc:   e3c33301    bic r3, r3, #67108864   ; 0x4000000
+a30005d0:   e5823008    str r3, [r2, #8]
+a30005d4:   e12fff1e    bx  lr
+a30005d8:   40d00000    sbcmis  r0, r0, r0
+
+a30005dc <C_SWI_Handler>:
+a30005dc:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a30005e0:   e1a05000    mov r5, r0
+a30005e4:   e1a04001    mov r4, r1
+a30005e8:   e10f3000    mrs r3, CPSR
+a30005ec:   e3c330c0    bic r3, r3, #192    ; 0xc0
+a30005f0:   e121f003    msr CPSR_c, r3
+a30005f4:   e2403609    sub r3, r0, #9437184    ; 0x900000
+a30005f8:   e2433003    sub r3, r3, #3  ; 0x3
+a30005fc:   e3530011    cmp r3, #17 ; 0x11
+a3000600:   979ff103    ldrls   pc, [pc, r3, lsl #2]
+a3000604:   ea00002d    b   a30006c0 <.text+0x6c0>
+search hit BOTTOM, continuing at TOP
+
+
+
+
+
+
+
+
+
+
+
+
+a3000608:   a3000650    movwge  r0, #1616   ; 0x650
+
+a300060c:   a3000664    movwge  r0, #1636   ; 0x664
+
+a3000610:   a30006c0    movwge  r0, #1728   ; 0x6c0a300060c:   a3000664    movwge  r0, #1636   ; 0x664
+a3000610:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000614:   a3000678    movwge  r0, #1656   ; 0x678
+a3000618:   a3000680    movwge  r0, #1664   ; 0x680
+a300061c:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000620:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000624:   a300068c    movwge  r0, #1676   ; 0x68c
+a3000628:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300062c:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000630:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000634:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000638:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300063c:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000640:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000644:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000648:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300064c:   a30006a8    movwge  r0, #1704   ; 0x6a8
+a3000650:   e5910000    ldr r0, [r1]
+a3000654:   e5942008    ldr r2, [r4, #8]
+a3000658:   e5911004    ldr r1, [r1, #4]
+a300065c:   eb000078    bl  a3000844 <read_syscall>
+a3000660:   ea00000e    b   a30006a0 <.text+0x6a0>
+a3000664:   e5910000    ldr r0, [r1]8501500c64636640c0728c047856788866481c0c0728c048c6768c82c0483c048c028c04c:   a30006a8    movwge  r0, #1704   ; 0x6a80100000, [r1]4420082, [r4, #88:   e5911004    ldr r1, [r1, #4]5c:   eb000078    bl844 <read_syscall>0:   ea00000e    b   a30006a0 <.text+0x6a0>a3000604:   ea00002d    b   a30006c0 <.text+0x6c0>a3000600:   979ff103    ldrls   pc, [pc, r3, lsl #2]a30005fc:   e3530011    cmp r3, #17 ; 0x11a30005f8:   e2433003    sub r3, r3, #3  ; 0x3a30005f4:   e2403609    sub r3, r0, #9437184    ; 0x900000a30005f0:   e121f003    msr CPSR_c, r3a30005ec:   e3c330c0    bic r3, r3, #192    ; 0xc0a30005e8:   e10f3000    mrs r3, CPSRa30005e4:   e1a04001    mov r4, r1a30005e0:   e1a05000    mov r5, r0a30005dc:   e92d4030    stmdb   sp!, {r4, r5, lr}a30005dc <C_SWI_Handler>:a30005d8:   40d00000    sbcmis  r0, r0, r0/event_waita300068c:   e10f3000    mrs r3, CPSR
+a3000690:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000694:   e121f003    msr CPSR_c, r3
+a3000698:   e8910003    ldmia   r1, {r0, r1}
+a300069c:   eb00012e    bl  a3000b5c <task_create>
+a30006a0:   e5840000    str r0, [r4]
+a30006a4:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006a8:   e10f3000    mrs r3, CPSR
+a30006ac:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b0:   e121f003    msr CPSR_c, r3
+a30006b4:   e5910000    ldr r0, [r1]
+a30006b8:   eb0000e8    bl  a3000a60 <event_wait>
+a30006bc:   eafffff7    b   a30006a0 <.text+0x6a0>
+a30006c0:   e59f0008    ldr r0, [pc, #8]    ; a30006d0 <.text+0x6d0>
+a30006c4:   eb0002ff    bl  a30012c8 <printf>
+a30006c8:   e1a00005    mov r0, r5
+a30006cc:   eb0000ad    bl  a3000988 <invalid_syscall>
+a30006d0:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}/event_waita3000a38:   1affffe6    bne a30009d8 <sort_all_tasks+0x30>
+a3000a3c:   e28aa001    add sl, sl, #1  ; 0x1
+a3000a40:   e2866014    add r6, r6, #20 ; 0x14
+a3000a44:   e1a07009    mov r7, r9
+a3000a48:   e157000b    cmp r7, fp
+a3000a4c:   1affffdd    bne a30009c8 <sort_all_tasks+0x20>
+a3000a50:   e3a00000    mov r0, #0  ; 0x0
+a3000a54:   e28dd004    add sp, sp, #4  ; 0x4
+a3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4 e52de004    str lr, []/a3 /a30006bcsearch hit BOTTOM, continuing at TOPa3000690:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000694:   e121f003    msr CPSR_c, r3
+a3000698:   e8910003    ldmia   r1, {r0, r1}
+a300069c:   eb00012e    bl  a3000b5c <task_create>
+a30006a0:   e5840000    str r0, [r4]
+a30006a4:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006a8:   e10f3000    mrs r3, CPSR
+a30006ac:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b0:   e121f003    msr CPSR_c, r3
+a30006b4:   e5910000    ldr r0, [r1]
+a30006b8:   eb0000e8    bl  a3000a60 <event_wait>
+a30006bc:   eafffff7    b   a30006a0 <.text+0x6a0>
+a30006c0:   e59f0008    ldr r0, [pc, #8]    ; a30006d0 <.text+0x6d0>
+a30006c4:   eb0002ff    bl  a30012c8 <printf>
+a30006c8:   e1a00005    mov r0, r5
+a30006cc:   eb0000ad    bl  a3000988 <invalid_syscall>
+a30006d0:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d4 <s_handler>:
+a30006d4:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006d8:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a30006dc:   e59f0054    ldr r0, [pc, #84]   ; a3000738 <.text+0x738>
+search hit BOTTOM, continuing at TOPa30006bc:   eafffff7    b   a30006a300068c:   e10f3000    mrs r3, CPSRa3000688:   ea000178    b   a3000c70 <sleep_syscall>@                                                                               a3000684:   e8bd4030    ldmia   sp!, {r4, r5, lr}a3000680:   e5910000    ldr r0, [r1]a300067c:   ea000007    b   a30006a0 <.text+0x6a0>a3000678:   eb000190    bl  a3000cc0 <time_syscall>a3000674:   ea000009    b   a30006a0 <.text+0x6a0>a3000670:   eb00005b    bl  a30007e4 <write_syscall>a300066c:   e5911004    ldr r1, [r1, #4]a3000668:   e5942008    ldr r2, [r4, #8]a3000664:   e5910000    ldr r0, [r1]a3000660:   ea00000e    b   a30006a0 <.text+0x6a0>a300065c:   eb000078    bl  a3000844 <read_syscall>a3000658:   e5911004    ldr r1, [r1, #4]a3000654:   e5942008    ldr r2, [r4, #8]a3000650:   e5910000    ldr r0, [r1]a300064c:   a30006a8    movwge  r0, #1704   ; 0x6a8a3000648:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000644:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000640:   a30006c0    movwge  r0, #1728   ; 0x6c0a300063c:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000638:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000634:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000630:   a30006c0    movwge  r0, #1728   ; 0x6c0a300062c:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000628:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000624:   a300068c    movwge  r0, #1676   ; 0x68ca3000620:   a30006c0    movwge  r0, #1728   ; 0x6c0a300061c:   a30006c0    movwge  r0, #1728   ; 0x6c0a3000618:   a3000680    movwge  r0, #1664   ; 0x680a3000614:   a3000678    movwge  r0, #1656   ; 0x678a3000610:   a30006c0    movwge  r0, #1728   ; 0x6c0a300060c:   a3000664    movwge  r0, #1636   ; 0x664a3000608:   a3000650    movwge  r0, #1616   ; 0x650a3000604:   ea00002d    b   a30006c0 <.text+0x6c0>a3000600:   979ff103    ldrls   pc, [pc, r3, lsl #2]a30005fc:   e3530011    cmp r3, #17 ; 0x11a30005f8:   e2433003    sub r3, r3, #3  ; 0x3a30005f4:   e2403609    sub r3, r0, #9437184    ; 0x900000a30005f0:   e121f003    msr CPSR_c, r3a30005ec:   e3c330c0    bic r3, r3, #192    ; 0xc0a30005e8:   e10f3000    mrs r3, CPSRa30005e4:   e1a04001    mov r4, r1a30005e0:   e1a05000    mov r5, r0a30005dc:   e92d4030    stmdb   sp!, {r4, r5, lr}a30005dc <C_SWI_Handler>:a30005d8:   40d00000    sbcmis  r0, r0, r0a3000624:   a300068c    movwge  r0, #1676   ; 0x68c
+a3000628:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300062c:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000630:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000634:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000638:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300063c:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000640:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000644:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a3000648:   a30006c0    movwge  r0, #1728   ; 0x6c0
+a300064c:   a30006a8    movwge  r0, #1704   ; 0x6a8
+a3000650:   e5910000    ldr r0, [r1]
+a3000654:   e5942008    ldr r2, [r4, #8]
+a3000658:   e5911004    ldr r1, [r1, #4]
+a300065c:   eb000078    bl  a3000844 <read_syscall>
+a3000660:   ea00000e    b   a30006a0 <.text+0x6a0>
+a3000664:   e5910000    ldr r0, [r1]
+a3000668:   e5942008    ldr r2, [r4, #8]
+a300066c:   e5911004    ldr r1, [r1, #4]
+a3000670:   eb00005b    bl  a30007e4 <write_syscall>
+a3000674:   ea000009    b   a30006a0 <.text+0x6a0>
+a3000678:   eb000190    bl  a3000cc0 <time_syscall>
+a300067c:   ea000007    b   a30006a0 <.text+0x6a0>a3000678:   eb000190    bl  a3000cc0 <time_syscall>7c:   ea000007    b   a30006a0 <.text+0x6a0>80:   e5910000    ldr r0, [r1]84:   e8bd4030    ldmia   sp!, {r4, r5, lr}88:   ea000178    b   a3000c70 <sleep_syscall>8c:   e10f3000    mrs r3, CPSR90:   e38330c0    orr r3, r3, #192 c094:   e121f003    msr CPSR_c, r398:   e8910003    ldmia   r1, {r0, r1}9c:   eb00012e    bl  a3000b5c <task_create>a0:   e5840000    str r0, [r4]a4:   e8bd803mia   sp!, {r4, r5, pc}a8:   e10f3000    mrs r3, CPSRac:   e38330c0    orr r3, r3, #192    ; 0xc0b0:   e121f003    msr CPSR_c, r3b4:   e5910000    ldr r0, [r1]b8:   eb0000e8    bl  a3000a60 <event_wait>bc:   eafffff7    b   a30006a0 <.text+0x6a0>c0f00080, [pc, #8]    ; a30006d0 <.text+0x6d0>c42ff12c8 <printf>c8:   e1a00005    mov r0, r5cc0ad988 <invalid_syscall>d0:   a3001758    movwge  r1, #1880   ; 0x758/event_waita3000a38:   1affffe6    bne a30009d8 <sort_all_tasks+0x30>
+a3000a3c:   e28aa001    add sl, sl, #1  ; 0x1
+a3000a40:   e2866014    add r6, r6, #20 ; 0x14
+a3000a44:   e1a07009    mov r7, r9
+a3000a48:   e157000b    cmp r7, fp
+a3000a4c:   1affffdd    bne a30009c8 <sort_all_tasks+0x20>
+a3000a50:   e3a00000    mov r0, #0  ; 0x0
+a3000a54:   e28dd004    add sp, sp, #4  ; 0x4
+a3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4 ebfffe9b    bl  a3000/\<a30004f0\>search hit BOTTOM, continuing at TOPa30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f200c    ldr r2, [pc, #12]   ; a3000510 <.text+0x510>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd8010    ldmia   sp!, {r4, pc}
+a3000510:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+a3000514 <install_handler>:
+search hit BOTTOM, continuing at TOP
+/a3000a84a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+a3000aa8:   ebfffda0    bl  a3000130 <valid_addr>a3000a7c:   ebfffe9b    bl  a300/\<a30004f0\>search hit BOTTOM, continuing at TOPa30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f200c    ldr r2, [pc, #12]   ; a3000510 <.text+0x510>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd8010    ldmia   sp!, {r4, pc}
+a3000510:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+a3000514 <install_handler>:
+search hit BOTTOM, continuing at TOP
+a30004f0:   e92d4010    stmdb   sp!a3000514 <install_handler>:
+a3000514:   e1a0c000    mov ip, r0
+a3000518:   e35c0008    cmp ip, #8  ; 0x8
+a300051c:   135c0018    cmpne   ip, #24 ; 0x18
+a3000520:   e52de004    str lr, [sp, #-4]!
+a3000524:   e59f0058    ldr r0, [pc, #88]   ; a3000584 <.text+0x584>
+a3000528:   03a02000    moveq   r2, #0  ; 0x0
+a300052c:   13a02001    movne   r2, #1  ; 0x1
+a3000530:   1a00000a    bne a3000560 <install_handler+0x4c>
+a3000534:   e59c3000    ldr r3, [ip]
+a3000538:   e1a0e002    mov lr, r2
+a300053c:   e59f0044    ldr r0, [pc, #68]   ; a3000588 <.text+0x588>
+a3000540:   e1a02a03    mov r2, r3, lsl #20
+a3000544:   e3c33eff    bic r3, r3, #4080   ; 0xff0
+a3000548:   e1a02a22    mov r2, r2, lsr #20
+a300054c:   e08cc002    add ip, ip, r2
+a3000550:   e59f2034    ldr r2, [pc, #52]   ; a300058c <.text+0x58c>
+a3000554:   e3c3300f    bic r3, r3, #15 ; 0xf
+a3000558:   e1530002    cmp r3, r2
+a300055c:   0a000002    beq a300056c <install_handler+0x58>
+a3000560:   eb000358    bl  a30012c8 <printf>
+a3000564:   e3e0e000    mvn lr, #0  ; 0x0a3000510:   a3001c08    movwge  r1, #3080   ; 0xc08 <install_handler>:4:   e1a0c000    mov ip, r08:   e35c000 ip, #8  ; 0x81c:   135c0018    cmpne   ip, #24 ; 0x180:   e52de004    str lr, [sp, #-4]!4:   e59f0058    ldr r0, [pc, #88]   ; a3000584 <.text+0x584>8:   03a02000eq0  ; 0x02c:   13a02001    movne   r2, #1  ; 0x10:   1a00000a    bne a3000560 <install_handler+0x4c>4:   e59c3000    ldr r3, [ip]8:   e1a0e002    mov lr, r23c:   e59f0044    ldr r0, [pc, #68]   ; a3000588 <.text+0x588>0:   e1a02a03    mov r2, r3, lsl #204:   e3c33eff    bic r3, r3, #4080   ; 0xff08:   e1a02a22    mov r2, r2, lsr #204c:   e08cc002    add ip, ip, r20:   e59f2034    ldr r2, [pc, #52]   ; a300058c <.text+0x58c>4:   e3c3300f    bic r3, r3, #15 ; 0xf8:   e153cmp r3, r25c:   0a000002    beq a300056c <install_handler+0x58>0:   eb000358    bl  a30012c8 <printf>a300050c:   e8bd8010    ldmia   sp!, {r4, pc}a3000508:   e7820184    str r0, [r2, r4, lsl #3]a3000504:   e5803030    str r3, [r0, #48]a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]a30004fc:   e59f200c    ldr r2, [pc, #12]   ; a3000510 <.text+0x510>a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>a30004f4:   e1a04000    mov r4, r0a30004f0:   e92d4010    stmdb   sp!, {r4, lr}a30004f0 <dev_wait>:
+
+
+
+
+
+
+
+
+a300050c:   e8bd8010    ldmia   sp!, {r4, pc}{r4, pc}r4, p[][]/\<a3000ea8\>a3000e88:   00001034    andeq   r1, r0, r4, lsr r0
+a3000e8c:   a3042b48    movwge  r2, #19272  ; 0x4b48
+a3000e90:   a3042b4c    movwge  r2, #19276  ; 0x4b4c
+
+a3000e94 <get_cur_prio>:
+a3000e94:   e59f3008    ldr r3, [pc, #8]    ; a3000ea4 <.text+0xea4>
+a3000e98:   e5933000    ldr r3, [r3]
+a3000e9c:   e5d30001    ldrb    r0, [r3, #1]
+a3000ea0:   e12fff1e    bx  lr
+a3000ea4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000ea8 <get_cur_tcb>:
+a3000ea8:   e59f3004    ldr r3, [pc, #4]    ; a3000eb4 <.text+0xeb4>
+a3000eac:   e5930000    ldr r0, [r3]
+a3000eb0:   e12fff1e    bx  lr
+a3000eb4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000eb8 <dispatch_sleep>:
+a3000eb8:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a3000ebc:   eb000086    bl  a30010dc <highest_prio>
+a3000ec0:   eb00006f    bl  a3001084 <runqueue_remove>
+a3000ec4:   e59f3034    ldr r3, [pc, #52]   ; a3000f00 <.text+0xf00>
+a3000ec8:   e1a04000    mov r4, r0a30?\<a3000ea8\>a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f200c    ldr r2, [pc, #12]   ; a3000510 <.text+0x510>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd8010    ldmia   sp!, {r4, pc}
+a3000510:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+a3000514 <install_handler>:
+a3000514:   e1a0c000    mov ip, r0
+a3000518:   e35c0008    cmp ip, #8  ; 0x8
+a300051c:   135c0018    cmpne   ip, #24 ; 0x18a30/\<a30004f0\>a3?search hit TOP, continuing at BOTTOMa3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+search hit TOP, continuing at BOTTOMa30/\<a30004f0\>search hit BOTTOM, continuing at TOPa30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f200c    ldr r2, [pc, #12]   ; a3000510 <.text+0x510>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd8010    ldmia   sp!, {r4, pc}
+a3000510:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+a3000514 <install_handler>:
+search hit BOTTOM, continuing at TOP
+a3?\<a30004f0\>search hit TOP, continuing at BOTTOMa3000a58:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a5c:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a60 <event_wait>:
+a3000a60:   e3500003    cmp r0, #3  ; 0x3
+a3000a64:   e52de004    str lr, [sp, #-4]!
+a3000a68:   9a000003    bls a3000a7c <event_wait+0x1c>
+a3000a6c:   e59f0018    ldr r0, [pc, #24]   ; a3000a8c <.text+0xa8c>
+a3000a70:   eb000214    bl  a30012c8 <printf>
+a3000a74:   e3e00015    mvn r0, #21 ; 0x15
+a3000a78:   e49df004    ldr pc, [sp], #4
+a3000a7c:   ebfffe9b    bl  a30004f0 <dev_wait>
+a3000a80:   eb00010c    bl  a3000eb8 <dispatch_sleep>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+search hit TOP, continuing at BOTTOMa30:q[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm kern*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7172 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734702008 
+tcb->kstack_high is a3003db8
+&(tcb->kstack_high) is a3003db8
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706160 
+tcb->kstack_high is a3004df0
+&(tcb->kstack_high) is a3004df0
+setting stuff in idle's tcb a3041b10
+setting up context with a3000cc4 00000000 a3042b48
+after setting up context 2734689476 0 2734959432 sp is 2734959432 
+tcb->kstack_high is a3042b48
+&(tcb->kstack_high) is a3042b48
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d80
+run_list[2] = a3003db8
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041b10
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+in dispatch sleep, sp is 2734701920
+.---------------------------------------------------------------------------.
+| 00000000       7c3d00a3 14009000 840a00a3 c00600a3       |=.............. |
+| 00000010       40000000 00000000 000700a3 00000000       @............... |
+| 00000020       f0ffffa1 04000000 00000000 40000000       ............@... |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       3002eea3 00000000 00000000 00000000       0............... |
+| 00000050       180100a0 10000020 02020000 a40000a0       ................ |
+| 00000060       23000000 000000a1 00000000 00000000       #............... |
+| 00000070       00000000 00000000 00000000 f04d00a3       .............M.. |
+| 00000080       bebafeca 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+| 000000a0       00000000 00000000 00000000 00000000       ................ |
+| 000000b0       00000000 00000000 00000000 00000000       ................ |
+| 000000c0       00000000 00000000                         ........         |
+`---------------------------------------------------------------------------'
+#
+in dispatch sleep, sp is 2734706072
+.---------------------------------------------------------------------------.
+| 00000000       b44d00a3 14009000 840a00a3 c00600a3       .M.............. |
+| 00000010       23000000 00000000 000700a3 01000000       #............... |
+| 00000020       f0ffffa0 04000000 00000000 23000000       ............#... |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       3002eea3 00000000 00000000 00000000       0............... |
+| 00000050       180100a0 10000020 00000000 00000000       ................ |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+| 000000a0       00000000 00000000 00000000 00000000       ................ |
+| 000000b0       00000000 00000000 00000000 00000000       ................ |
+| 000000c0       00000000 00000000                         ........         |
+`---------------------------------------------------------------------------'
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003db8  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,set) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:34 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+c[root@group10 ~]# cd bins
+[root@group10 bins]# objdump -D kernel > D.txt 
+[root@group10 bins]# vi D.txt 
+"D.txt" 2430L, 95900Ckernel:     file format elf32-littlearm
+
+Disassembly of section .text:
+
+a3000000 <_start>:
+a3000000:   e1a02008    mov r2, r8
+a3000004:   ea00000a    b   a3000034 <kmain>
+
+a3000008 <panic>:
+a3000008:   e92d000f    stmdb   sp!, {r0, r1, r2, r3}
+a300000c:   e24dd004    sub sp, sp, #4  ; 0x4
+a3000010:   e28d3008    add r3, sp, #8  ; 0x8
+a3000014:   e59f0014    ldr r0, [pc, #20]   ; a3000030 <.text+0x30>
+a3000018:   e58d3000    str r3, [sp]
+a300001c:   eb0004a9    bl  a30012c8 <printf>
+a3000020:   e10f3000    mrs r3, CPSR
+a3000024:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000028:   e121f003    msr CPSR_c, r3
+a300002c:   eafffffe    b   a300002c <panic+0x24>
+a3000030:   a3001428    movwge  r1, #1064   ; 0x428
+
+a3000034 <kmain>:/dev_waita30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f2010    ldr r2, [pc, #16]   ; a3000514 <.text+0x514>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd4010    ldmia   sp!, {r4, lr}
+a3000510:   ea000268    b   a3000eb8 <dispatch_sleep>
+a3000514:   a3001c08    movwge  r1, #3080   ; 0xc08?\<a30004f0\>search hit TOP, continuing at BOTTOMa3000a5c:   e8bd8ef0    ldmia   sp!, {r4, r5, r6, r7, r9, sl, fp, pc}
+a3000a60:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a64 <event_wait>:
+a3000a64:   e3500003    cmp r0, #3  ; 0x3
+a3000a68:   e52de004    str lr, [sp, #-4]!
+a3000a6c:   9a000003    bls a3000a80 <event_wait+0x1c>
+a3000a70:   e59f0014    ldr r0, [pc, #20]   ; a3000a8c <.text+0xa8c>
+a3000a74:   eb000213    bl  a30012c8 <printf>
+a3000a78:   e3e00015    mvn r0, #21 ; 0x15
+a3000a7c:   e49df004    ldr pc, [sp], #4
+a3000a80:   ebfffe9a    bl  a30004f0 <dev_wait>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+search hit TOP, continuing at BOTTOMr0, #0  ; 0/\<a30004f0\>search hit BOTTOM, continuing at TOPa30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f2010    ldr r2, [pc, #16]   ; a3000514 <.text+0x514>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd4010    ldmia   sp!, {r4, lr}
+a3000510:   ea000268    b   a3000eb8 <dispatch_sleep>
+a3000514:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+search hit BOTTOM, continuing at TOPa3
+a3
+a3
+a3
+a3
+a3
+a3
+a3
+a300050c:   e8bd4010    ldm a3
+
+
+/\<a3000eb8\>a3000e98:   e5933000    ldr r3, [r3]
+a3000e9c:   e5d30001    ldrb    r0, [r3, #1]
+a3000ea0:   e12fff1e    bx  lr
+a3000ea4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000ea8 <get_cur_tcb>:
+a3000ea8:   e59f3004    ldr r3, [pc, #4]    ; a3000eb4 <.text+0xeb4>
+a3000eac:   e5930000    ldr r0, [r3]
+a3000eb0:   e12fff1e    bx  lr
+a3000eb4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000eb8 <dispatch_sleep>:
+a3000eb8:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a3000ebc:   eb000086    bl  a30010dc <highest_prio>
+a3000ec0:   eb00006f    bl  a3001084 <runqueue_remove>
+a3000ec4:   e59f3034    ldr r3, [pc, #52]   ; a3000f00 <.text+0xf00>
+a3000ec8:   e1a04000    mov r4, r0
+a3000ecc:   e5935000    ldr r5, [r3]
+a3000ed0:   e5830000    str r0, [r3]
+a3000ed4:   ebfffe16    bl  a3000734 <get_kernel_sp>
+a3000ed8:   e1a01000    mov r1, r0
+a3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>
+a3000eb8 <dispata3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>
+a3000ee4:   ebfffe12    bl  a3000734 <get_kernel_sp>
+a3000ee8:   e3a010c8    mov r1, #200    ; 0xc8
+a3000eec:   ebfffd08    bl  a3000314 <hexdump>
+a3000ef0:   e2840004    add r0, r4, #4  ; 0x4
+a3000ef4:   e2851004    add r1, r5, #4  ; 0x4
+a3000ef8:   e8bd4030    ldmia   sp!, {r4, r5, lr}
+a3000efc:   ea000024    b   a3000f94 <ctx_switch_full>
+a3000f00:   a3001c30    movwge  r1, #3120   ; 0xc30
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30
+
+a3000f08 <dispatch_nosave>:
+a3000f08:   eb000073    bl  a30010dc <highest_prio>
+a3000f0c:   eb00005c    bl  a3001084 <runqueue_remove>
+a3000f10:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>
+a3000f14:   e1a02000    mov r2, r0
+a3000f18:   e2800004    add r0, r0, #4  ; 0x4
+a3000f1c:   e5832000    str r2, [r3]
+a3000f20:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000f28 <dispatch_save>:8:   e1a01000    mov r1, r0dc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>0:   eb0000f812c8 <printf>4:   ebfffe12    bl  a3000734 <get_kernel_sp>8:   e3a010c8    mov r1, #200    ; 0xc8ec:   ebfffd08    bl  a3000314 <hexdump>0400, r44:   e2851004    add r1, r5, #4  ; 0x48:   e8bd4030    ldmia   sp!, {r4, r5, lr}efc:   ea000024    b   a3000f94 <ctx_switch_full>0c3120c
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30 <dispatch_nosave>:873dc <highest_prio>0c:   eb00005c    bl  a3001084 <runqueue_remove>0:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>4:   e1a02000    mov r28:   e2800004    add r0, r0, #4  ; 0x41c:   e5832000    str r2, [r3]0:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30a3000ed4:   ebfffe16    bl  a3000734 <get_kernel_sp>a3000ed0:   e5830000    str r0, [r3]a3000ecc:   e5935000    ldr r5, [r3]a3000ec8:   e1a04000    mov r4, r0a3000ec4:   e59f3034    ldr r3, [pc, #52]   ; a3000f00 <.text+0xf00>a3000ec0:   eb00006f    bl  a3001084 <runqueue_remove>a3000ebc:   eb000086    bl  a30010dc <highest_prio>a3000eb8:   e92d4030    stmdb   sp!, {r4, r5, lr}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a3000efc:   ea000024    b   a3000f94 <ctefc:   ea000024    b   a3000/\<a3000f94\>a3000f30:   e5940000    ldr r0, [r4]
+a3000f34:   e5d01001    ldrb    r1, [r0, #1]
+a3000f38:   eb00003e    bl  a3001038 <runqueue_add>
+a3000f3c:   eb000066    bl  a30010dc <highest_prio>
+a3000f40:   eb00004f    bl  a3001084 <runqueue_remove>
+a3000f44:   e5941000    ldr r1, [r4]
+a3000f48:   e1a03000    mov r3, r0
+a3000f4c:   e2800004    add r0, r0, #4  ; 0x4
+a3000f50:   e2811004    add r1, r1, #4  ; 0x4
+a3000f54:   e5843000    str r3, [r4]
+a3000f58:   e8bd4010    ldmia   sp!, {r4, lr}
+a3000f5c:   ea00000c    b   a3000f94 <ctx_switch_full>
+a3000f60:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000f64 <launch_task>:
+a3000f64:   e1a00005    mov r0, r5
+a3000f68:   e3a01000    mov r1, #0  ; 0x0
+a3000f6c:   e3a02000    mov r2, #0  ; 0x0
+a3000f70:   e3a03000    mov r3, #0  ; 0x0
+a3000f74:   e3a05000    mov r5, #0  ; 0x0
+a3000f78:   e3a08000    mov r8, #0  ; 0x0
+a3000f7c:   e3a0c000    mov ip, #0  ; 0x0
+a3000f80:   e321f010    msr CPSR_c, #16 ; 0x10a3/\<a3000f94\>a3000f84:   e1a0d006    mov sp, r6
+a3000f88:   e3a06000    mov r6, #0  ; 0x0
+a3000f8c:   e59fe044    ldr lr, [pc, #68]   ; a3000fd8 <.text+0xfd8>
+a3000f90:   e1a0f004    mov pc, r4
+
+a3000f94 <ctx_switch_full>:a3000f94 <ctx_switch_full>:
+a3000f94:   e8816ff0    stmia   r1, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000f98:   e59f103c    ldr r1, [pc, #60]   ; a3000fdc <.text+0xfdc>
+a3000f9c:   e5912000    ldr r2, [r1]
+a3000fa0:   e7903002    ldr r3, [r0, r2]
+a3000fa4:   e59f1034    ldr r1, [pc, #52]   ; a3000fe0 <.text+0xfe0>
+a3000fa8:   e5912000    ldr r2, [r1]
+a3000fac:   e0801002    add r1, r0, r2
+a3000fb0:   e1530001    cmp r3, r1
+a3000fb4:   1a000000    bne a3000fbc <already_launched>
+a3000fb8:   eb000001    bl  a3000fc4 <ctx_switch_half>
+
+a3000fbc <already_launched>:
+a3000fbc:   e8906ff0    ldmia   r0, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000fc0:   e1a0f00e    mov pc, lr
+
+a3000fc4 <ctx_switch_half>:
+a3000fc4:   e5904000    ldr r4, [r0]
+a3000fc8:   e5905004    ldr r5, [r0, #4]
+a3000fcc:   e5906008    ldr r6, [r0, #8]
+a3000fd0:   e590d020    ldr sp, [r0, #32]
+a3000fd4:   eaffffe2    b   a3000f64 <launch_task>a3000f90:   e1a0f004    mov pc, r4 <ctx_switch_full>:4:   e8816ff0    stmia   r1, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}8f103c1, [pc, #60]   ; a3000fdc <.text+0xfdc>9c:   e59120002, [r1]0:   e79030023, [r0, r2]4f10341, [pc, #52]   ; a3000fe0 <.text+0xfe0>8:   e5912000    ldr r2, [r1]ac:   e0801002    add r1, r0, r20:   e1530001    cmp r3, r14:   1a000000    bnebc <already_launched>
+a3000fb8:   eb000001    bl  a3000fc4 <ctx_switch_half> <already_launched>:bc:   e8906ff0    ldmia   r0, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+a3000fc0:   e1a0f00e    mov pc, lr <ctx_switch_half>:440004, [r0]8500454cc6008r68]0:   e590d020    ldr sp, [r0, #32]a3000f8c:   e59fe044    ldr lr, [pc, #68]   ; a3000fd8 <.text+0xfd8>a3000f88:   e3a06000    mov r6, #0  ; 0x0a3000f84:   e1a0d006    mov sp, r6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a3
+a3
+a3
+a3
+a3
+a3
+a3
+a3
+a3
+a3
+
+a3
+a3
+a3000fa3000f80:   e321f010    msr CPSR_c, #16 ; 0x10a300a3000f7c:   e3a0c000    mov ip, #0  ; 0x0a300a3000f78:   e3a08000    mov r8, #0  ; 0x0a300a3000f74:   e3a05000    mov r5, #0  ; 0x0a300a3000f70:   e3a03000    mov r3, #0  ; 0x0a300a3000f6c:   e3a02000    mov r2, #0  ; 0x0a300a3000f68:   e3a01000    mov r1, #0  ; 0x0a300a3000f64:   e1a00005    mov r0, r5a300a3000f64 <launch_task>:a300a3000f60:   a3001c30    movwge  r1, #3120   ; 0xc30a300a3000f5c:   ea00000c    b   a3000f94 <ctx_switch_full>a300a3000f58:   e8bd4010    ldmia   sp!, {r4, lr}a300a3000f54:   e5843000    str r3, [r4]a300a3000f50:   e2811004    add r1, r1, #4  ; 0x4a300/a3000a84search hit BOTTOM, continuing at TOPa3000a60:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a64 <event_wait>:
+a3000a64:   e3500003    cmp r0, #3  ; 0x3
+a3000a68:   e52de004    str lr, [sp, #-4]!
+a3000a6c:   9a000003    bls a3000a80 <event_wait+0x1c>
+a3000a70:   e59f0014    ldr r0, [pc, #20]   ; a3000a8c <.text+0xa8c>
+a3000a74:   eb000213    bl  a30012c8 <printf>
+a3000a78:   e3e00015    mvn r0, #21 ; 0x15
+a3000a7c:   e49df004    ldr pc, [sp], #4
+a3000a80:   ebfffe9a    bl  a30004f0 <dev_wait>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+a3000aa8:   ebfffda0    bl  a3000130 <valid_addr>
+search hit BOTTOM, continuing at TOPa3000a84:   e3a00000    mov rc, [sp][sp]s[sp][sp]/a3003d7csearch hit BOTTOM, continuing at TOPE486: Pattern not found: a3003d7c4f0 <de/\<dev_wait\>search hit BOTTOM, continuing at TOPa30004c8:   e2866001    add r6, r6, #1  ; 0x1
+a30004cc:   e3560004    cmp r6, #4  ; 0x4
+a30004d0:   e2855008    add r5, r5, #8  ; 0x8
+a30004d4:   e2877004    add r7, r7, #4  ; 0x4
+a30004d8:   1affffe1    bne a3000464 <dev_update+0x14>
+a30004dc:   e8bd84f0    ldmia   sp!, {r4, r5, r6, r7, sl, pc}
+a30004e0:   a3001c08    movwge  r1, #3080   ; 0xc08
+a30004e4:   a3001690    movwge  r1, #1680   ; 0x690
+a30004e8:   a3001640    movwge  r1, #1600   ; 0x640
+a30004ec:   a3001668    movwge  r1, #1640   ; 0x668
+
+a30004f0 <dev_wait>:
+a30004f0:   e92d4010    stmdb   sp!, {r4, lr}
+a30004f4:   e1a04000    mov r4, r0
+a30004f8:   eb00026a    bl  a3000ea8 <get_cur_tcb>
+a30004fc:   e59f2010    ldr r2, [pc, #16]   ; a3000514 <.text+0x514>
+a3000500:   e7923184    ldr r3, [r2, r4, lsl #3]
+a3000504:   e5803030    str r3, [r0, #48]
+a3000508:   e7820184    str r0, [r2, r4, lsl #3]
+a300050c:   e8bd4010    ldmia   sp!, {r4, lr}
+a3000510:   ea000268    b   a3000eb8 <dispatch_sleep>
+a3000514:   a3001c08    movwge  r1, #3080   ; 0xc08
+
+search hit BOTTOM, continuing at TOP ea000268    b   a3000e
+
+
+/\<a3000eb8\>a3000e98:   e5933000    ldr r3, [r3]
+a3000e9c:   e5d30001    ldrb    r0, [r3, #1]
+a3000ea0:   e12fff1e    bx  lr
+a3000ea4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000ea8 <get_cur_tcb>:
+a3000ea8:   e59f3004    ldr r3, [pc, #4]    ; a3000eb4 <.text+0xeb4>
+a3000eac:   e5930000    ldr r0, [r3]
+a3000eb0:   e12fff1e    bx  lr
+a3000eb4:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000eb8 <dispatch_sleep>:
+a3000eb8:   e92d4030    stmdb   sp!, {r4, r5, lr}
+a3000ebc:   eb000086    bl  a30010dc <highest_prio>
+a3000ec0:   eb00006f    bl  a3001084 <runqueue_remove>
+a3000ec4:   e59f3034    ldr r3, [pc, #52]   ; a3000f00 <.text+0xf00>
+a3000ec8:   e1a04000    mov r4, r0
+a3000ecc:   e5935000    ldr r5, [r3]
+a3000ed0:   e5830000    str r0, [r3]
+a3000ed4:   ebfffe16    bl  a3000734 <get_kernel_sp>
+a3000ed8:   e1a01000    mov r1, r0
+a3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>
+
+
+
+
+
+
+
+a3000ed4:   ebfffe16    bl  a3000a3000edc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>
+a3000ee0:   eb0000f8    bl  a30012c8 <printf>
+a3000ee4:   ebfffe12    bl  a3000734 <get_kernel_sp>
+a3000ee8:   e3a010c8    mov r1, #200    ; 0xc8
+a3000eec:   ebfffd08    bl  a3000314 <hexdump>
+a3000ef0:   e2840004    add r0, r4, #4  ; 0x4
+a3000ef4:   e2851004    add r1, r5, #4  ; 0x4
+a3000ef8:   e8bd4030    ldmia   sp!, {r4, r5, lr}
+a3000efc:   ea000024    b   a3000f94 <ctx_switch_full>
+a3000f00:   a3001c30    movwge  r1, #3120   ; 0xc30
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30
+
+a3000f08 <dispatch_nosave>:
+a3000f08:   eb000073    bl  a30010dc <highest_prio>
+a3000f0c:   eb00005c    bl  a3001084 <runqueue_remove>
+a3000f10:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>
+a3000f14:   e1a02000    mov r2, r0
+a3000f18:   e2800004    add r0, r0, #4  ; 0x4
+a3000f1c:   e5832000    str r2, [r3]
+a3000f20:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30
+
+a3000f28 <dispatch_save>:8:   e1a01000    mov r1, r0dc:   e59f0020    ldr r0, [pc, #32]   ; a3000f04 <.text+0xf04>0:   eb0000f812c8 <printf>4:   ebfffe12    bl  a3000734 <get_kernel_sp>8:   e3a010c8    mov r1, #200    ; 0xc8ec:   ebfffd08    bl  a3000314 <hexdump>0400, r44:   e2851004    add r1, r5, #4  ; 0x48:   e8bd4030    ldmia   sp!, {r4, r5, lr}efc:   ea000024    b   a3000f94 <ctx_switch_full>0c3120c
+a3000f04:   a3001a30    movwge  r1, #2608   ; 0xa30 <dispatch_nosave>:873dc <highest_prio>0c:   eb00005c    bl  a3001084 <runqueue_remove>0:   e59f300c    ldr r3, [pc, #12]   ; a3000f24 <.text+0xf24>4:   e1a02000    mov r28:   e2800004    add r0, r0, #4  ; 0x41c:   e5832000    str r2, [r3]0:   eb000027    bl  a3000fc4 <ctx_switch_half>
+a3000f24:   a3001c30    movwge  r1, #3120   ; 0xc30a3000ed4:   ebfffe16    bl  a3000734 <get_kernel_sp>
+
+
+
+
+
+
+
+
+a3000ef8:   e8bd4030    ldmia3/\<a3000eb8\>/\<dev_wait\>/\<a3000eb8\>/\<dev_wait\>/a3003d7c0a84search hit BOTTOM, continuing at TOPa3000a60:   a30017b8    movwge  r1, #1976   ; 0x7b8
+
+a3000a64 <event_wait>:
+a3000a64:   e3500003    cmp r0, #3  ; 0x3
+a3000a68:   e52de004    str lr, [sp, #-4]!
+a3000a6c:   9a000003    bls a3000a80 <event_wait+0x1c>
+a3000a70:   e59f0014    ldr r0, [pc, #20]   ; a3000a8c <.text+0xa8c>
+a3000a74:   eb000213    bl  a30012c8 <printf>
+a3000a78:   e3e00015    mvn r0, #21 ; 0x15
+a3000a7c:   e49df004    ldr pc, [sp], #4
+a3000a80:   ebfffe9a    bl  a30004f0 <dev_wait>
+a3000a84:   e3a00000    mov r0, #0  ; 0x0
+a3000a88:   e49df004    ldr pc, [sp], #4
+a3000a8c:   a30017e8    movwge  r1, #2024   ; 0x7e8
+
+a3000a90 <validate_all_tasks>:
+a3000a90:   e92d4070    stmdb   sp!, {r4, r5, r6, lr}
+a3000a94:   e1a06001    mov r6, r1
+a3000a98:   e1a04000    mov r4, r0
+a3000a9c:   e3a05000    mov r5, #0  ; 0x0
+a3000aa0:   ea000021    b   a3000b2c <validate_all_tasks+0x9c>
+a3000aa4:   e5940000    ldr r0, [r4]
+a3000aa8:   ebfffda0    bl  a3000130 <valid_addr>
+search hit BOTTOM, continuing at TOPa3000a84:   e3a00000    mov pc, [sp][sp]/a30006bcsearch hit BOTTOM, continuing at TOPa3000690:   e10f3000    mrs r3, CPSR
+a3000694:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000698:   e121f003    msr CPSR_c, r3
+a300069c:   e8910003    ldmia   r1, {r0, r1}
+a30006a0:   eb00012d    bl  a3000b5c <task_create>
+a30006a4:   e5840000    str r0, [r4]
+a30006a8:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006ac:   e10f3000    mrs r3, CPSR
+a30006b0:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b4:   e121f003    msr CPSR_c, r3
+a30006b8:   e5910000    ldr r0, [r1]
+a30006bc:   eb0000e8    bl  a3000a64 <event_wait>
+a30006c0:   eafffff7    b   a30006a4 <.text+0x6a4>
+a30006c4:   e59f0008    ldr r0, [pc, #8]    ; a30006d4 <.text+0x6d4>
+a30006c8:   eb0002fe    bl  a30012c8 <printf>
+a30006cc:   e1a00005    mov r0, r5
+a30006d0:   eb0000ad    bl  a300098c <invalid_syscall>
+a30006d4:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d8 <s_handler>:
+a30006d8:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006dc:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+search hit BOTTOM, continuing at TOPa30006bc:   eb0000e8    006c0:   eafffff7    b   a300/\<a30006a4\>search hit BOTTOM, continuing at TOPa3000638:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a300063c:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a3000640:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a3000644:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a3000648:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a300064c:   a30006c4    movwge  r0, #1732   ; 0x6c4
+a3000650:   a30006ac    movwge  r0, #1708   ; 0x6ac
+a3000654:   e5910000    ldr r0, [r1]
+a3000658:   e5942008    ldr r2, [r4, #8]
+a300065c:   e5911004    ldr r1, [r1, #4]
+a3000660:   eb000078    bl  a3000848 <read_syscall>
+a3000664:   ea00000e    b   a30006a4 <.text+0x6a4>
+a3000668:   e5910000    ldr r0, [r1]
+a300066c:   e5942008    ldr r2, [r4, #8]
+a3000670:   e5911004    ldr r1, [r1, #4]
+a3000674:   eb00005b    bl  a30007e8 <write_syscall>
+a3000678:   ea000009    b   a30006a4 <.text+0x6a4>
+a300067c:   eb00018f    bl  a3000cc0 <time_syscall>
+a3000680:   ea000007    b   a30006a4 <.text+0x6a4>
+a3000684:   e5910000    ldr r0, [r1]
+a3000688:   e8bd4030    ldmia   sp!, {r4, r5, lr}
+a300068c:   ea000177    b   a3000c70 <sleep_syscall>
+a3000690:   e10f3000    mrs r3, CPSR
+search hit BOTTOM, continuing at TOP/\<a30006a4\>a3000694:   e38330c0    orr r3, r3, #192    ; 0xc0
+a3000698:   e121f003    msr CPSR_c, r3
+a300069c:   e8910003    ldmia   r1, {r0, r1}
+a30006a0:   eb00012d    bl  a3000b5c <task_create>
+a30006a4:   e5840000    str r0, [r4]
+
+
+a30006a8:   e8bd8030    ldmia   sp!, {r4, r5, pc}a30006a4:   e5840000    str r0, [r4]
+a30006a8:   e8bd8030    ldmia   sp!, {r4, r5, pc}
+a30006ac:   e10f3000    mrs r3, CPSR
+a30006b0:   e38330c0    orr r3, r3, #192    ; 0xc0
+a30006b4:   e121f003    msr CPSR_c, r3
+a30006b8:   e5910000    ldr r0, [r1]
+a30006bc:   eb0000e8    bl  a3000a64 <event_wait>
+a30006c0:   eafffff7    b   a30006a4 <.text+0x6a4>
+a30006c4:   e59f0008    ldr r0, [pc, #8]    ; a30006d4 <.text+0x6d4>
+a30006c8:   eb0002fe    bl  a30012c8 <printf>
+a30006cc:   e1a00005    mov r0, r5
+a30006d0:   eb0000ad    bl  a300098c <invalid_syscall>
+a30006d4:   a3001758    movwge  r1, #1880   ; 0x758
+
+a30006d8 <s_handler>:
+a30006d8:   e24dd004    sub sp, sp, #4  ; 0x4
+a30006dc:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a30006e0:   e59f0054    ldr r0, [pc, #84]   ; a300073c <.text+0x73c>
+a30006e4:   e5908000    ldr r8, [r0]
+a30006e8:   e14f2000    mrs r2, SPSR
+a30006ec:   e58d2038    str r2, [sp, #56]
+a30006f0:   e1a0100d    mov r1, sp0:   eb00012d    bl  a3000b5c <task_create>4:   e5840000    str r0, [r4]8:   e8bd8030    ldmia   sp!, {r4, r5, pc}ac:   e10f3000    mrs r3, CPSR0:   e38330c0    orr r3, r3, #192    ; 0xc04:   e121f003    msr CPSR_c, r38:   e5910000    ldr r0, [r1]bc:   eb0000e8    bla64 <event_wait>0:   eafffff7    b   a30006a4 <.text+0x6a4>4:   e59f0008    ldr r0, [pc, #8]    ; a30006d4 <.text+0x6d4>8:   eb0002fe    bl  a30012c8 <printf>cc:   e1a00005    mov r0, r50:   eb0000ad    bl  a300098c <invalid_syscall>
+a30006d4:   a3001758    movwge  r1, #1880   ; 0x758 <s_handler>:8:   e24dd004    sub sp, sp, #4  ; 0x4a30006dc:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}0f00540, [pc, #84]   ; a300073c <.text+0x73c>4:   e5908ldr r8, [r0]8:   e14f2000    mrs r2, SPSRec:   e58d2038    str r2, [sp, #56]a300069c:   e8910003    ldmia   r1, {r0, r1}
+
+
+a30006a8:   e8b/a3 d8030    ldmia   sp!, {}{}r4, {}{}ir3,30
+a30006a8:   e8bd8030    ldmia   sp!, {}{}r/a30006fca30006ec:   e58d2038    str r2, [sp, #56]
+a30006f0:   e1a0100d    mov r1, sp
+a30006f4:   e51e0004    ldr r0, [lr, #-4]
+a30006f8:   e3c004ff    bic r0, r0, #-16777216  ; 0xff000000
+a30006fc:   ebffffb7    bl  a30005e0 <C_SWI_Handler>a30006fa30006ac:   e10f3000    mrs r3, CPSRa30006a8:   e8bd8030    ldmia   sp!, {r4, r5, pc}a30006a4:   e5840000    str r0, [r4]a30006a0:   eb00012d    bl  a3000b5c <task_create>a300069c:   e8910003    ldmia   r1, {r0, r1}a3000698:   e121f003    msr CPSR_c, r3a3000694:   e38330c0    orr r3, r3, #192    ; 0xc0a3000690:   e10f3000    mrs r3, CPSRa300068c:   ea000177    b   a3000c70 <sleep_syscall>@                                                                               a3000688:   e8bd4030    ldmia   sp!, {r4, r5, lr}/a30006fca30006dc:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a30006e0:   e59f0054    ldr r0, [pc, #84]   ; a300073c <.text+0x73c>
+a30006e4:   e5908000    ldr r8, [r0]
+a30006e8:   e14f2000    mrs r2, SPSR
+a30006ec:   e58d2038    str r2, [sp, #56]
+a30006f0:   e1a0100d    mov r1, sp
+a30006f4:   e51e0004    ldr r0, [lr, #-4]
+a30006f8:   e3c004ff    bic r0, r0, #-16777216  ; 0xff000000
+a30006fc:   ebffffb7    bl  a30005e0 <C_SWI_Handler>a30a30006f8:   e3c004ff    bic r0, r0, #-16777216  ; 0xff000000
+a30006fc:   ebffffb7    bl  a30005e0 <C_SWI_Handler>
+a3000700:   e59d2038    ldr r2, [sp, #56]
+a3000704:   e169f002    msr SPSR_fc, r2
+a3000708:   e8bd5fff    ldmia   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}
+a300070c:   e28dd004    add sp, sp, #4  ; 0x4
+a3000710:   e1b0f00e    movs    pc, lr
+
+a3000714 <enter_user_mode>:
+a3000714:   e3a03010    mov r3, #16 ; 0x10
+a3000718:   e3833080    orr r3, r3, #128    ; 0x80
+a300071c:   e10fc000    mrs ip, CPSR
+a3000720:   e3ccc09f    bic ip, ip, #159    ; 0x9f
+a3000724:   e18cc003    orr ip, ip, r3
+a3000728:   e129f00c    msr CPSR_fc, ip
+a300072c:   e3a0d4a3    mov sp, #-1560281088    ; 0xa3000000
+a3000730:   e3a0f20a    mov pc, #-1610612736    ; 0xa0000000
+
+a3000734 <get_kernel_sp>:
+a3000734:   e1a0000d    mov r0, sp
+a3000738:   e1a0f00e    mov pc, lr
+a300073c:   a3001d44    movwge  r1, #3396   ; 0xd444:   e51e0004    ldr r0, [lr, #-4]8:   e3c004ff    bic r0, r0, #-16777216  ; 0xff0000006fc:   ebffffb7    bl  a30005e0 <C_SWI_Handler>0:   e59d2038    ldr r2, [sp, #56]4:   e169f002    msr SPSR_fc, r2a3000708:   e8bd5fff    ldmia   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}0c:   e28dd004    add sp, sp, #4  ; 0x4
+a3000710:   e1b0f00e    movs    pc, lr <enter_user_mode>:4:   e3a03010    mov r3, #16 ; 0x108:   e3833080    orr r3, r3, #128    ; 0x801c:   e10fc000    mrs ip, CPSR0:   e3ccc09f    bic#159    ; 0x9f4:   e18cc003    orr ip, ip, r38:   e129f00c    msr CPSR_fc, ip2cd4a3sp, #-15602810883
+a3000730:   e3a0f20a    mov pc, #-1610612736    ; 0xa0000000 <get_kernel_sp>:4000dr0, sp8:   e1a0f00e pc, lra30006f0:   e1a0100d    mov r1, spa30006ec:   e58d2038    str r2, [sp, #56]a30006e8:   e14f2000    mrs r2, SPSRa30006e4:   e5908000    ldr r8, [r0]a30006e0:   e59f0054    ldr r0, [pc, #84]   ; a300073c <.text+0x73c>a30006dc:   e92d5fff    stmdb   sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp, ip, lr}a30006d8:   e24dd004    sub sp, sp, #4  ; 0x4a30006d8 <s_handler>:
+
+
+
+
+
+
+
+
+
+
+
+
+
+:q[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# rm kern*
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# 
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> atload mmc 0            fatload mmc 0 da  a0000000 dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7116 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734701952 
+tcb->kstack_high is a3003d80
+&(tcb->kstack_high) is a3003d80
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706104 
+tcb->kstack_high is a3004db8
+&(tcb->kstack_high) is a3004db8
+setting stuff in idle's tcb a3041ad8
+setting up context with a3000cc4 00000000 a3042b10
+after setting up context 2734689476 0 2734959376 sp is 2734959376 
+tcb->kstack_high is a3042b10
+&(tcb->kstack_high) is a3042b10
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d48
+run_list[2] = a3003d80
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041ad8
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+.---------------------------------------------------------------------------.
+| 00000000       a40000a0 23000000 000000a1 00000000       ....#........... |
+| 00000010       00000000 00000000 00000000 00000000       ................ |
+| 00000020       b84d00a3 bebafeca 00000000 00000000       .M.............. |
+| 00000030       00000000 00000000 00000000 00000000       ................ |
+| 00000040       00000000 00000000 00000000 00000000       ................ |
+| 00000050       00000000 00000000 00000000 00000000       ................ |
+| 00000060       00000000 00000000 00000000 00000000       ................ |
+| 00000070       00000000 00000000 00000000 00000000       ................ |
+| 00000080       00000000 00000000 00000000 00000000       ................ |
+| 00000090       00000000 00000000 00000000 00000000       ................ |
+`---------------------------------------------------------------------------'
+prefetch abort
+pc : [<ea000214>]    lr : [<a3000fa4>]
+sp : a3f00960  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : ea000212
+r3 : 00000000  r2 : 00000000  r1 : 00000000  r0 : e59ff014
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003d80  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+
+876752 bytes read
+## Booting image at a2000000 ...
+   Image Name:   uImage
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    876688 Bytes = 856.1 kB
+   Load Address: a0008000
+   Entry Point:  a0008000
+OK
+
+Starting kernel ...
+
+Linux version 2.6.18gum (mkasick@krang) (gcc version 3.4.5) #1 Wed Oct 3 13:21:40 EDT 2007
+CPU: XScale-PXA255 [69052d06] revision 6 (ARMv5TE), cr=0000397f
+Machine: The Gumstix Platform
+Memory policy: ECC disabled, Data cache writeback
+Memory clock: 99.53MHz (*27)
+Run Mode clock: 398.13MHz (*4)
+Turbo Mode clock: 398.13MHz (*1.0, inactive)
+CPU0: D VIVT undefined 5 cache
+CPU0: I cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+CPU0: D cache: 32768 bytes, associativity 32, 32 byte lines, 32 sets
+Built 1 zonelists.  Total pages: 16384
+Kernel command line: console=ttyS0,115200n8 root=/dev/mmcblk0p2 rootfstype=ext3 reboot=cold,hard
+PID hash table entries: 512 (order: 9, 2048 bytes)
+start_kernel(): bug: interrupts were enabled early
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 63104KB available (1460K code, 263K data, 64K init)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+NET: Registered protocol family 2
+IP route cache hash table entries: 512 (order: -1, 2048 bytes)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 2048 bind 1024)
+TCP reno registered
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+Initializing Cryptographic API
+io scheduler noop registered (default)
+pxa2xx-uart.0: ttyS0 at MMIO 0x40100000 (irq = 15) is a FFUART
+pxa2xx-uart.1: ttyS1 at MMIO 0x40200000 (irq = 14) is a BTUART
+pxa2xx-uart.2: ttyS2 at MMIO 0x40700000 (irq = 13) is a STUART
+pxa2xx-uart.3: ttyS3 at MMIO 0x41600000 (irq = 0) is a HWUART
+Probing Gumstix Flash ROM at physical address 0x00000000 (16-bit bankwidth)
+Gumstix Flash ROM: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Using static partitions on Gumstix Flash ROM
+Creating 2 MTD partitions on "Gumstix Flash ROM":
+0x00000000-0x00040000 : "Bootloader"
+0x00040000-0x01000000 : "RootFS"
+TCP bic registered
+mmcblk0: mmc0:0001 MMC    990720KiB 
+ mmcblk0: p1 p2
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on mmcblk0p2, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+VFS: Mounted root (ext3 filesystem).
+Freeing init memory: 64K
+NET: Registered protocol family 1
+i2c /dev entries driver
+I2C: i2c-0: PXA I2C adapter
+Robostix Driver: SVN: 1161 Compiled: Oct  3 2007 at 13:31:09
+Starting robostix...
+Set (AF2,in,clear) via /proc/gpio/GPIO46
+Set (AF1,out,set) via /proc/gpio/GPIO47
+Set (GPIO,out,clear) via /proc/gpio/GPIO72
+Set (GPIO,out,set) via /proc/gpio/GPIO70
+Set (GPIO,out,set) via /proc/gpio/GPIO73
+Initializing random number generator... done.
+Starting 32kHz clock...Settled
+Set (AF1,out,clear) via /proc/gpio/GPIO12
+Starting Bluetooth subsystem:Trying baud rate 57600...
+Set (GPIO,out,clear) via /proc/gpio/GPIO7
+Set (GPIO,out,set) via /proc/gpio/GPIO7
+No response after reset
+
+Initialization timed out.
+Starting network...
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[169]: udhcpc (v0.9.9-pre) started
+pxa2xx_udc: version 4-May-2005
+usb0: Ethernet Gadget, version: May Day 2005
+usb0: using pxa2xx_udc, OUT ep2out-bulk IN ep1in-bulk STATUS ep6in-bulk
+usb0: MAC da:69:57:7e:13:a1
+usb0: HOST MAC da:69:57:7e:13:a2
+usb0: RNDIS ready
+Nothing to flush.
+NET: Registered protocol family 17
+udhcpc (v0.9.9-pre) started
+Jan  1 00:00:34 udhcpc[195]: udhcpc (v0.9.9-pre) started
+smc91x: not found (-19).
+m
+Jan  1 00:00:35 udhcpc[195]: [truncated] m
+Starting sshd: OK
+
+
+
+Welcome to the Gumstix Linux Distribution!
+
+group10 login: root
+Password: 
+Welcome to Gumstix!
+[root@group10 ~]# cd bins
+[root@group10 bins]# rm kern*
+[root@group10 bins]# ./mn.sh dagger.bin
+success!
+[root@group10 bins]# reboot
+[root@group10 bins]# Stopping robostix...
+Set (GPIO,out,clear) via /proc/gpio/GPIO73
+Saving random seed... done.
+Stopping Bluetooth subsystem:Failed to open control socket: Address family not supported by protocol
+Stopping network.../var/run/udhcpc.eth0.pid: No such file or directory
+/var/run/udhcpc.eth0.pid: No such file or directory
+ip: Device "eth0" does not exist
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+SIOCGIFFLAGS: No such device
+BusyBox v1.1.2 (2007.10.03-17:07+0000) multi-call binary
+
+Usage: ip [ OPTIONS ] { address | link | route | tunnel } { COMMAND | help }
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+where  OBJECT := { link | addr | route | tunnel }
+OPTIONS := { -f[amily] { inet | inet6 | link } | -o[neline] }
+
+Stopping sshd: OK
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Sending SIGKILPlease stand by while rebooting the system.
+Restarting system.
+.
+
+
+U-Boot 1.2.0 (May 10 2008 - 13:33:03) - 400 MHz - 1604
+
+*** Welcome to Gumstix ***
+
+DRAM:  64 MB
+Flash: 16 MB
+Using default environment
+
+SMC91C1111-0
+Net:   SMC91C1111-0
+Hit any key to stop autoboot:  2  0 
+GUM> mmcinit
+Detected: 1981440 blocks of 512 bytes (967MB) MMC card.
+Vendor: Man 1e OEM ffff "MMC   " Date 11/2008
+Product: 536871226
+Revision: N/A
+GUM> fatload mmc 0 a0000000 dagger.bin
+reading dagger.bin
+
+584 bytes read
+GUM> fatload mmc 0 a3000000 kernel.bin
+reading kernel.bin
+
+7164 bytes read
+GUM> go a3000000
+## Starting application at 0xA3000000 ...
+finished installing handlers
+entering user mode
+setting up context with a00000dc 00000040 a2000000
+after setting up context 2684354780 64 2717908992 sp is 2734702000 
+tcb->kstack_high is a3003db0
+&(tcb->kstack_high) is a3003db0
+setting up context with a00000a4 00000023 a1000000
+after setting up context 2684354724 35 2701131776 sp is 2734706152 
+tcb->kstack_high is a3004de8
+&(tcb->kstack_high) is a3004de8
+setting stuff in idle's tcb a3041b08
+setting up context with a3000cc4 00000000 a3042b40
+after setting up context 2734689476 0 2734959424 sp is 2734959424 
+tcb->kstack_high is a3042b40
+&(tcb->kstack_high) is a3042b40
+RUN LIST
+run_list[0] = 00000000
+run_list[1] = a3002d78
+run_list[2] = a3003db0
+run_list[3] = 00000000
+run_list[4] = 00000000
+run_list[5] = 00000000
+run_list[6] = 00000000
+run_list[7] = 00000000
+run_list[8] = 00000000
+run_list[9] = 00000000
+run_list[10] = 00000000
+run_list[11] = 00000000
+run_list[12] = 00000000
+run_list[13] = 00000000
+run_list[14] = 00000000
+run_list[15] = 00000000
+run_list[16] = 00000000
+run_list[17] = 00000000
+run_list[18] = 00000000
+run_list[19] = 00000000
+run_list[20] = 00000000
+run_list[21] = 00000000
+run_list[22] = 00000000
+run_list[23] = 00000000
+run_list[24] = 00000000
+run_list[25] = 00000000
+run_list[26] = 00000000
+run_list[27] = 00000000
+run_list[28] = 00000000
+run_list[29] = 00000000
+run_list[30] = 00000000
+run_list[31] = 00000000
+run_list[32] = 00000000
+run_list[33] = 00000000
+run_list[34] = 00000000
+run_list[35] = 00000000
+run_list[36] = 00000000
+run_list[37] = 00000000
+run_list[38] = 00000000
+run_list[39] = 00000000
+run_list[40] = 00000000
+run_list[41] = 00000000
+run_list[42] = 00000000
+run_list[43] = 00000000
+run_list[44] = 00000000
+run_list[45] = 00000000
+run_list[46] = 00000000
+run_list[47] = 00000000
+run_list[48] = 00000000
+run_list[49] = 00000000
+run_list[50] = 00000000
+run_list[51] = 00000000
+run_list[52] = 00000000
+run_list[53] = 00000000
+run_list[54] = 00000000
+run_list[55] = 00000000
+run_list[56] = 00000000
+run_list[57] = 00000000
+run_list[58] = 00000000
+run_list[59] = 00000000
+run_list[60] = 00000000
+run_list[61] = 00000000
+run_list[62] = 00000000
+run_list[63] = a3041b08
+RUN BITS
+run_bits[0] = 6
+run_bits[1] = 0
+run_bits[2] = 0
+run_bits[3] = 0
+run_bits[4] = 0
+run_bits[5] = 0
+run_bits[6] = 0
+run_bits[7] = 80
+GROUP_RUN_BITS = 81
+@
+launch task called from ctx sw full
+prefetch abort
+pc : [<ea000214>]    lr : [<a3000fac>]
+sp : a3f00960  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : ea000212
+r3 : 00000000  r2 : 00000000  r1 : 00000000  r0 : e59ff014
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...
+
+prefetch abort
+pc : [<deadbef0>]    lr : [<a0000118>]
+sp : a3003db0  ip : 00000000  fp : 00000000
+r10: 00000000  r9 : a3ee0230  r8 : 00000000
+r7 : 00000000  r6 : 00000000  r5 : 00000000  r4 : 00000040
+r3 : 00000000  r2 : 00000004  r1 : a1fffff0  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode USER_32
+Resetting CPU ...

@@ -12,6 +12,7 @@
 #include <exports.h>
 #include <config.h>
 #include <sched.h>
+#include <device.h>
 
 #define TIMER_FREQ_FACTOR 100
 
@@ -59,6 +60,7 @@ void init_timer(void)
 void timer_handler(unsigned int int_num)
 {		        
 	uint32_t ossr_reg;
+
 	/*
 	 * increment the numticks
 	 */
@@ -84,12 +86,17 @@ void timer_handler(unsigned int int_num)
 	reg_write(OSTMR_OSSR_ADDR, ossr_reg);
 
 	/*
+	 * update the devices
+	 */
+	dev_update(get_millis());
+
+	/*
 	 * perform context switch
 	 */
-	if(!(num_ticks % 100)) {
-		printf("context switching......\n");
-		dispatch_save();
-	}
+//	if(!(num_ticks % 50)) {
+	dispatch_save();
+//	}
+
 	int_num = int_num;
 	return;
 }

@@ -43,24 +43,33 @@ FUNC(launch_task)
 /* add your code to perform a full context switch */
 FUNC(ctx_switch_full)
 	stmia r1, {r4, r5, r6, r7, r8, r9, r10, r11, sp, lr}
-	ldr r1, =ctx_sp_offset
-	ldr r2, [r1]
-	ldr r3, [r0, r2]
-	ldr r1, =kstack_high_offset
-	ldr r2, [r1]
-	add r1, r0, r2
+@	stmfd sp!, {r0, r1}
+@	mov r0, r1
+@	mov r1, #160
+@	bl hexdump
+@	ldmfd sp!, {r0, r1}
+@loop: b loop
+@	mov ip, r0
+@	mov r0,ip 
+@	mov r1, #160
+@	bl hexdump
+@	ldr r1, =ctx_lr_offset
+@	ldr r2, [r1]
+@	ldr r3, [r0, #36]
+@	ldr r1, =0xcafebabe
+@	ldr r1, =kstack_high_offset
+@	ldr r2, [r1]
+@	add r1, r0, r2
 @	ldr r2 , =0xA2FFFAF0
 @	str r3, [r2]
 @	str r1, [r2, #4]
-	cmp r3, r1
-	bne already_launched
-	bl ctx_switch_half
-already_launched:
-	ldmia r0, {r4, r5, r6, r7, r8, r9, r10, r11, sp, lr}
-@	mov r1, #160
-@	bl hexdump
-@loop: b loop
-	mov pc, lr
+@	cmp r3, r1
+@	bne already_launched
+@	bl debug_print
+@	bl ctx_switch_half
+@already_launched:
+	ldmia r0, {r4, r5, r6, r7, r8, r9, r10, r11, sp, pc}
+@	mov pc, lr
 
 /*add your code to perform a half context switch */	
 FUNC(ctx_switch_half)
@@ -68,4 +77,5 @@ FUNC(ctx_switch_half)
 	ldr r5, [r0, #4]
 	ldr r6, [r0, #8]
 	ldr sp, [r0, #32]
-	bl launch_task
+	ldr pc, [r0, #36]
+@	b launch_task
