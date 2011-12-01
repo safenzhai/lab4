@@ -148,10 +148,17 @@ int task_create(task_t* tasks, size_t num_tasks)
 	 * setup the run queues
 	 */
 	runqueue_init();
+
 	/*
 	 * setup the devices
 	 */
 	dev_init();
+
+	/*
+	 * setup the mutexes
+	 */
+	mutex_init();
+
 	/*
 	 * allocate the tcb's for all tasks
 	 */
@@ -172,6 +179,7 @@ int task_create(task_t* tasks, size_t num_tasks)
 	 */
 	dispatch_init(&system_tcb[IDLE_PRIO]);
 	dispatch_nosave();
+
     return 1; /* remove this line after adding your code */
 }
 

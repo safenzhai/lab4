@@ -28,6 +28,7 @@ unsigned long time_syscall(void)
  * @param: millis - number of milliseconds to sleep  
  * @return void 
  */
+ #if 0
 void sleep_syscall(unsigned long millis)
 {
 	unsigned long sleep_till_ticks;
@@ -56,4 +57,10 @@ void sleep_syscall(unsigned long millis)
 	 * time to wake up!
 	 */
 	return;
+}
+#endif
+
+void sleep_syscall(unsigned long millis)
+{
+	printf("x is: %d\n", (int)millis);
 }

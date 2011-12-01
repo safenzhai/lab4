@@ -93,7 +93,7 @@ void C_SWI_Handler(int swi_num, unsigned int *sp)
 			*sp = time_syscall();
 			break;
 		case SLEEP_SWI:
-			enable_interrupts();
+//			enable_interrupts();
 			r0 = *sp;
 		    sleep_syscall((unsigned long)r0);
 			break;
@@ -109,6 +109,17 @@ void C_SWI_Handler(int swi_num, unsigned int *sp)
 //			while(1);	
 			printf("returned from event_wait\n");
 		break;
+		case MUTEX_CREATE:
+			*sp = mutex_create();
+		break;	
+		case MUTEX_LOCK:
+			r0 = *sp;
+			*sp = mutex_lock((int)r0);
+		break;	
+		case MUTEX_UNLOCK:
+			r0 = *sp;
+			*sp = mutex_unlock((int)r0);
+		break;	
 		default:
 		    printf("\n C_SWI_Handler:invalid SWI call, panic\n");
 			invalid_syscall(swi_num);	

@@ -52,7 +52,7 @@ void dispatch_init(tcb_t* idle)
 //	printf("inside dispatch init, calling ctx sw half\n");
 //	printf("calling ctx swi half  ptr is %p\n", &(idle->context));
 //	ctx_switch_half((volatile void *)(&(idle->context)));
-	
+	cur_tcb = NULL;	
 }
 
 
@@ -70,18 +70,18 @@ void dispatch_save(void)
 	tcb_t *next_tcb, *saved_cur_tcb;
 
 //	printf("inside dispatch save\n");
+
+//	printf("added cur_tcb %u %p to run queue\n", cur_tcb->cur_prio, cur_tcb);
+	next_prio = highest_prio();
 	/*
 	 * add the current task to the run queue...
 	 */
 	runqueue_add(cur_tcb, cur_tcb->cur_prio);
-
-//	printf("added cur_tcb %u %p to run queue\n", cur_tcb->cur_prio, cur_tcb);
-	next_prio = highest_prio();
 //	printf("next_prio is %u\n", next_prio);
 		
 
 	next_tcb = runqueue_remove(next_prio);
-//	printf("removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
+//	printf(" d save: removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
 //	print_run_queue();
 	saved_cur_tcb = cur_tcb;
 	cur_tcb = next_tcb;
@@ -117,7 +117,7 @@ void dispatch_nosave(void)
 	 * manage the run queue...
 	 */
 	next_tcb = runqueue_remove(next_prio);
-//	printf("removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
+//	printf("d nosave: removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
 //	print_run_queue();
 	cur_tcb = next_tcb;
 //	printf("before calling ctx sw half, context->sp is %p\n", next_tcb->context.sp);
@@ -141,7 +141,7 @@ void dispatch_sleep(void)
 //	printf("next_prio is %u\n", next_prio);
 		
 	next_tcb = runqueue_remove(next_prio);
-//	printf("removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
+//	printf("d sleep: removed next_tcb %u %p from run queue\n", next_tcb->cur_prio, next_tcb);
 //	print_run_queue();
 	saved_cur_tcb = cur_tcb;
 	cur_tcb = next_tcb;

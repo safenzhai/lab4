@@ -1,0 +1,6 @@
+PROGS_MUTEX_OBJS := mutex.o
+PROGS_MUTEX_OBJS := $(PROGS_MUTEX_OBJS:%=$(TDIR)/mutex/%)
+ALL_OBJS += $(PROGS_MUTEX_OBJS)
+
+$(TDIR)/bin/mutex : $(TSTART) $(PROGS_MUTEX_OBJS) $(TLIBC)
+
